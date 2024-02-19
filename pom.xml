@@ -28,7 +28,7 @@
 			their business, from projects to user stories, contracts, progress logs, and quality audits.
 	</description>
 	
-	<artifactId>Acme-SF-D01</artifactId>
+	<artifactId>Acme-SF-D02</artifactId>
 	<packaging>war</packaging>
 	
 	<parent>
