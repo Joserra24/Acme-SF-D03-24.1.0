@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -40,8 +41,7 @@ public class Risk extends AbstractEntity {
 	@Length(max = 255)
 	private Date				identificationDate;
 
-	// Impact must be positive.
-	// This requirement will be implemented soon.
+	@Min(0)
 	private double				impact;
 
 	@Range(min = 0, max = 100)
