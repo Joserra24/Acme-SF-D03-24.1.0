@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 // import javax.persistence.ManyToOne;
 // import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
@@ -34,11 +36,11 @@ public class Contract extends AbstractEntity {
 	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "^[A-Z]{1,3}-[0-9]{3}$")
-	@Length(max = 7)
 	private String				code;
 
 	@NotNull
 	@Past
+	@Temporal(TemporalType.TIMESTAMP)
 	private LocalDateTime		instantiationMoment;
 
 	@NotNull
