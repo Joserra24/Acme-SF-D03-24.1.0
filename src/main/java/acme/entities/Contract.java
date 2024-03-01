@@ -2,9 +2,13 @@
 package acme.entities;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 // import javax.persistence.ManyToOne;
@@ -65,9 +69,11 @@ public class Contract extends AbstractEntity {
 
 	// Relationships ----------------------------------------------------------
 
-	//	@NotNull
 	//	@Valid
 	//	@ManyToOne(optional = false)
 	//	private Project			    project;
+
+	@OneToMany(mappedBy = "contract", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private List<ProgressLog>	progressLogs;
 
 }
