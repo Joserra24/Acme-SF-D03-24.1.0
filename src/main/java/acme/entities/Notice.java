@@ -4,6 +4,8 @@ package acme.entities;
 import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -29,6 +31,7 @@ public class Notice extends AbstractEntity {
 
 	@NotNull
 	@Past
+	@Temporal(TemporalType.TIMESTAMP)
 	private LocalDateTime		instantiationMoment;
 
 	@NotNull
@@ -38,8 +41,9 @@ public class Notice extends AbstractEntity {
 
 	@NotNull
 	@NotBlank
+	@Pattern(regexp = "^[^-]+ - [^,]+, [^,]+$")
 	@Length(max = 76)
-	private String				author;   // Falta añadir la restricción del username
+	private String				author;
 
 	@NotNull
 	@NotBlank
