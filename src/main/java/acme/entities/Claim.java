@@ -33,7 +33,7 @@ public class Claim extends AbstractEntity {
 	@NotNull
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^C-[0-9]{4}$") 	//¿Está bien asi?
+	@Pattern(regexp = "C-\\d{4}")
 	private String				code;
 
 	@Past
@@ -43,23 +43,23 @@ public class Claim extends AbstractEntity {
 
 	@NotNull
 	@NotBlank
-	@Length(max = 76)
+	@Length(max = 75)
 	private String				heading;
 
 	@NotNull
 	@NotBlank
-	@Length(max = 101)
+	@Length(max = 100)
 	private String				description;
 
 	@NotNull
 	@NotBlank
-	@Length(max = 101)
-
+	@Length(max = 100)
 	private String				departament;
 
 	@Email
 	private String				email;
 
 	@URL
+	@Length(max = 255)
 	private String				link;
 }
