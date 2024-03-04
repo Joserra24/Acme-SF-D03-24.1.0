@@ -52,7 +52,7 @@ public class Objective extends AbstractEntity {
 	private boolean				status;
 
 	@NotNull
-	private Duration			duration; //esto esta bien?
+	private Duration			duration;
 
 	@URL
 	private String				link;
