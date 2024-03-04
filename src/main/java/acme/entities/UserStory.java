@@ -4,6 +4,8 @@ package acme.entities;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
@@ -30,27 +32,29 @@ public class UserStory extends AbstractEntity {
 
 	@NotNull
 	@NotBlank
-	@Length(max = 76)
+	@Length(max = 75)
 	private String				title;
 
 	@NotNull
 	@NotBlank
-	@Length(max = 101)
+	@Length(max = 100)
 	private String				description;
 
-	@NotNull
 	@Positive
-	private Integer				estimatedCost;
+	@Digits(integer = 3, fraction = 2)
+	@DecimalMin(value = "0.01", inclusive = true)
+	private double				estimatedCost;
 
 	@NotNull
 	@NotBlank
-	@Length(max = 101)
+	@Length(max = 100)
 	private String				acceptanceCriteria;
 
 	@NotNull
 	private Priority			priority;
 
 	@URL
+	@Length(max = 255)
 	private String				link;
 
 	// Derived attributes -----------------------------------------------------
@@ -58,7 +62,7 @@ public class UserStory extends AbstractEntity {
 	// Relationships ----------------------------------------------------------
 	@NotNull
 	@Valid
-	@ManyToOne(optional = false) //es esta relacion????
+	@ManyToOne(optional = false)
 	private Manager				manager;
 
 }

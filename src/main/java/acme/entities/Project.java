@@ -14,6 +14,7 @@ import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
 import acme.client.data.datatypes.Money;
+import acme.roles.Manager;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,34 +31,35 @@ public class Project extends AbstractEntity {
 	@NotNull
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^[A-Z]{3}\\d{4}$") //esto esta bien????
+	@Pattern(regexp = "[A-Z]{3}-\\d{4}")
 	private String				code;
 
 	@NotNull
 	@NotBlank
-	@Length(max = 76)
+	@Length(max = 75)
 	private String				title;
 
 	@NotNull
 	@NotBlank
-	@Length(max = 101)
-	private String				avstract;
+	@Length(max = 100)
+	private String				$abstract;
 
 	@NotNull
 	private Money				cost;
 
 	@URL
+	@Length(max = 255)
 	private String				link;
 
-	// Derived attributes -----------------------------------------------------
+	private boolean				draftMode;
 
-	//an indication on whether it has fatal errors, e.g., panics//no se como hacerlo
+	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private UserStory			userStory; //tengo que poner esto asi o tengo que poner otra vez manager?
+	private Manager				manager;
 
 }
