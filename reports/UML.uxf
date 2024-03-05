@@ -86,7 +86,7 @@ Risk
 --
 + reference: String {Pattern(“R-[0-9]{3}”), NotBlank, Unique}
 + identificationDate: Date {NotNull, Temporal(TIMESTAMP), Past}
-+ impact: double
++ impact: double {Min(0)}
 + probability: int {Range(0,100)}
 + / value: double
 + description: String {NotBlank, Length(max=100)}
@@ -98,31 +98,8 @@ Risk
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>32</x>
+      <x>104</x>
       <y>632</y>
-      <w>144</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes>bg=pink
-impact must be positive</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>96</x>
-      <y>600</y>
-      <w>24</w>
-      <h>48</h>
-    </coordinates>
-    <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>192</x>
-      <y>624</y>
       <w>192</w>
       <h>48</h>
     </coordinates>
@@ -135,13 +112,13 @@ probability</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
+      <x>192</x>
       <y>600</y>
       <w>24</w>
-      <h>40</h>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
-    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
