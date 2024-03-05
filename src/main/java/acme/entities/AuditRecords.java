@@ -2,11 +2,14 @@
 package acme.entities;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -16,7 +19,7 @@ import org.hibernate.validator.constraints.URL;
 import org.hibernate.validator.constraints.time.DurationMin;
 
 import acme.client.data.AbstractEntity;
-import acme.enumerated.Nota;
+import acme.enumerated.Mark;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -43,10 +46,14 @@ public class AuditRecords extends AbstractEntity {
 	@DurationMin(hours = 1)
 	private Date				period;
 
-	//PREGUNTAR  POR ENUM NOTA
 	@NotNull
-	private Nota				mark;
+	private Mark				mark;
 
 	@URL
 	private String				optionalLink;
+
+	@ManyToOne
+	@Valid
+	@NotNull
+	private List<CodeAudits>			codeAudits;
 }

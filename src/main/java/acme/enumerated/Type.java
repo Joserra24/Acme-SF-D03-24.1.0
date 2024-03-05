@@ -1,6 +1,6 @@
 
 package acme.enumerated;
 
-public enum Tipo {
+public enum Type {
 	STATIC, DYNAMIC;
 }
