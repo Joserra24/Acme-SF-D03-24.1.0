@@ -6,8 +6,6 @@ import java.sql.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -39,13 +37,11 @@ public class TrainingSession extends AbstractEntity {
 	private String				code;
 
 	//El periodo debe crearse con al menos una semana de antelación y tiene que durar como minimo una semana.
-	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	protected Date				startPeriod;
+	private Date				startPeriod;
 
-	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	protected Date				endPeriod;
+	private Date				endPeriod;
 
 	@NotBlank
 	@NotNull
