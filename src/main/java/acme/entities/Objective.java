@@ -1,45 +1,59 @@
 
-package acme.roles;
+package acme.entities;
 
-import java.util.List;
+import java.time.Duration;
+import java.util.Date;
 
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.client.data.AbstractRole;
+import acme.client.data.AbstractEntity;
+import acme.enumerated.ObjectivePriority;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Manager extends AbstractRole {
+public class Objective extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
 	private static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
+
+	@Past
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				instantiationMoment;
+
 	@NotNull
 	@NotBlank
 	@Length(max = 75)
-	private String				degree;
+	private String				title;
 
 	@NotNull
 	@NotBlank
 	@Length(max = 100)
-	private String				overview;
+	private String				description;
 
 	@NotNull
-	@NotBlank
-	@Length(max = 100)
-	@ElementCollection
-	private List<String>		certifications;
+	private ObjectivePriority	priority;
+
+	private boolean				status;
+
+	@NotNull
+	@FutureOrPresent
+	private Duration			duration;
 
 	@URL
 	@Length(max = 255)

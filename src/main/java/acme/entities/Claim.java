@@ -1,49 +1,61 @@
 
-package acme.roles;
+package acme.entities;
 
-import java.util.List;
+import java.util.Date;
 
-import javax.persistence.ElementCollection;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.client.data.AbstractRole;
+import acme.client.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Developer extends AbstractRole {
+public class Claim extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
 	private static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
+	@NotNull
+	@NotBlank
+	@Column(unique = true)
+	@Pattern(regexp = "C-\\d{4}")
+	private String				code;
+
+	@Past
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				instantiationMoment;
 
 	@NotNull
 	@NotBlank
 	@Length(max = 75)
-	private String				degree;
+	private String				heading;
 
 	@NotNull
 	@NotBlank
 	@Length(max = 100)
-	private String				specialisation;
+	private String				description;
 
 	@NotNull
 	@NotBlank
 	@Length(max = 100)
-	@ElementCollection
-	private List<String>		skills;
+	private String				departament;
 
-	@NotNull
 	@Email
 	private String				email;
 
