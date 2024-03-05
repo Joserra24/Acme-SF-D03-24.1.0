@@ -36,24 +36,25 @@ public class Notice extends AbstractEntity {
 
 	@NotNull
 	@NotBlank
-	@Length(max = 76)
+	@Length(max = 75)
 	private String				title;
 
 	@NotNull
 	@NotBlank
 	@Pattern(regexp = "^[^-]+ - [^,]+, [^,]+$")
-	@Length(max = 76)
+	@Length(max = 75)
 	private String				author;
 
 	@NotNull
 	@NotBlank
-	@Length(max = 101)
+	@Length(max = 100)
 	private String				message;
 
 	@Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")
 	private String				email;
 
 	@URL
+	@Length(max = 255)
 	private String				link;
 
 	// Derived attributes -----------------------------------------------------
