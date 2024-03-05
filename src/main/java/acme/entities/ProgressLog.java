@@ -46,7 +46,7 @@ public class ProgressLog extends AbstractEntity {
 
 	@NotNull
 	@NotBlank
-	@Length(max = 101)
+	@Length(max = 100)
 	private String				comment;
 
 	@NotNull
@@ -56,7 +56,7 @@ public class ProgressLog extends AbstractEntity {
 
 	@NotNull
 	@NotBlank
-	@Length(max = 76)
+	@Length(max = 75)
 	private String				responsiblePerson;
 
 	// Derived attributes -----------------------------------------------------

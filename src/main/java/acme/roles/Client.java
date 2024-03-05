@@ -34,7 +34,7 @@ public class Client extends AbstractRole {
 
 	@NotNull
 	@NotBlank
-	@Length(max = 76)
+	@Length(max = 75)
 	private String				companyName;
 
 	@NotNull
@@ -47,6 +47,7 @@ public class Client extends AbstractRole {
 	private String				email;
 
 	@URL
+	@Length(max = 255)
 	private String				link;
 
 }
