@@ -43,6 +43,8 @@ public class Sponsorship extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				moment;
 
+	// duration must start must start at any moment after the instantiation/update moment and must last for at least
+	// one week. This requirement will be implemented soon.
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				durationStart;
@@ -52,6 +54,7 @@ public class Sponsorship extends AbstractEntity {
 	private Date				durationEnd;
 
 	@Valid
+	@NotNull
 	private Money				amount;
 
 	@NotNull
