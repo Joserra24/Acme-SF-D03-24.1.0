@@ -10,9 +10,9 @@
 
 master.company.title = La empresa
 master.company.text = \
-	Acme Software Factory, Inc. (Acme SF, Inc. for short) is a fictitious company that specialises in helping \
-	organisations get started on a variety of topics related to the management and development of  \
-	software projects.
+	Acme Software Factory, Inc. (Acme SF, Inc. de forma abreviada) es una compañia ficticia especializada en ayudar \
+	a organizaciones a empezar en una variedad de temas relacionados en la gestion y desarrollo de \
+	proyectos software.
 master.company.name = Acme SF, Inc.
 master.company.address = Av. de la Reina Mercedes, s/n, Sevilla
 master.company.phone = +34 673 624 334
