@@ -1,0 +1,10 @@
+key,title,description,estimated-cost,acceptance-criteria,priority,link,key:manager
+user-story-01,User Story 1,This is the description for User Story 1.,10,The acceptance criteria for User Story 1.,MUST,https://example.com/user-story-1,manager-01
+user-story-02,onoawnepiubnpaef,This is the description for User Story 2.,8,The acceptance criteria for User Story 2.,SHOULD,https://example.com/user-story-2,manager-01
+user-story-03,r,This is the description for User Story 3.,12,The acceptance criteria for User Story 3.,COULD,https://example.com/user-story-3,manager-02
+user-story-04,User Story 4,This is the description for User Story 4.,15,The acceptance criteria for User Story 4.,WONT,https://example.com/user-story-4,manager-02
+user-story-05,User Story 5,This is the description for User Story 5.,20,The acceptance criteria for User Story 5.,MUST,https://example.com/user-story-5,manager-01
+user-story-06,User Story 6,This is the description for User Story 6.,5,The acceptance criteria for User Story 6.,SHOULD,https://example.com/user-story-6,manager-01
+user-story-07,User Story 7,This is the description for User Story 7.,15,The acceptance criteria for User Story 7.,COULD,null,manager-02
+user-story-08,User Story 8,This is the description for User Story 8.,12,The acceptance criteria for User Story 8.,WONT,null,manager-02
+user-story-09,User Story 9,This is the description for User Story 9.,8,The acceptance criteria for User Story 9.,MUST,null,manager-01
