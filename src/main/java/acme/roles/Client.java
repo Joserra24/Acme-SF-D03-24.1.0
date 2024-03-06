@@ -3,6 +3,7 @@ package acme.roles;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -26,24 +27,20 @@ public class Client extends AbstractRole {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotNull
 	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "^CLI-[0-9]{4}$")
 	private String				identification;
 
-	@NotNull
 	@NotBlank
 	@Length(max = 75)
 	private String				companyName;
 
 	@NotNull
-	@NotBlank
 	private ClientType			type;
 
-	@NotNull
 	@NotBlank
-	@Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")
+	@Email
 	private String				email;
 
 	@URL

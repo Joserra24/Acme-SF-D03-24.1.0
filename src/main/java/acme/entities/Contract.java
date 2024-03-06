@@ -53,7 +53,6 @@ public class Contract extends AbstractEntity {
 	@Length(max = 100)
 	private String				goals;
 
-	@NotNull
 	@NotBlank
 	private Money				budget;
 
