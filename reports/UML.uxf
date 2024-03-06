@@ -39,7 +39,7 @@ Objective
 + instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
 + title: String {NotBlank, Length(max=75)}
 + description: String {NotBlank, Length(max=100)}
-+ priority: ObjectivePriority
++ priority: ObjectivePriority {NotNull}
 + status: boolean
 + durationStart: Date {NotNull, Temporal(TIMESTAMP)}
 + durationEnd: Date {NotNull, Temporal(TIMESTAMP)}
@@ -54,11 +54,13 @@ Objective
       <x>112</x>
       <y>376</y>
       <w>192</w>
-      <h>48</h>
+      <h>64</h>
     </coordinates>
     <panel_attributes>bg=pink
 durationStart must be any moment
-after the instantiation moment</panel_attributes>
+after the instantiation moment and
+durationStart must be prior to
+durationEnd.</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -75,8 +77,8 @@ after the instantiation moment</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>32</x>
-      <y>472</y>
+      <x>24</x>
+      <y>464</y>
       <w>352</w>
       <h>136</h>
     </coordinates>
@@ -88,7 +90,7 @@ Risk
 + identificationDate: Date {NotNull, Temporal(TIMESTAMP), Past}
 + impact: double {Min(0)}
 + probability: int {Range(0,100)}
-+ / value: double
++ / value: double {Transient}
 + description: String {NotBlank, Length(max=100)}
 + link: String {URL} 
 
@@ -98,8 +100,8 @@ Risk
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>104</x>
-      <y>632</y>
+      <x>96</x>
+      <y>624</y>
       <w>192</w>
       <h>48</h>
     </coordinates>
@@ -112,8 +114,8 @@ probability</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>192</x>
-      <y>600</y>
+      <x>184</x>
+      <y>592</y>
       <w>24</w>
       <h>48</h>
     </coordinates>
@@ -123,8 +125,8 @@ probability</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
-      <y>328</y>
+      <x>664</x>
+      <y>336</y>
       <w>360</w>
       <h>128</h>
     </coordinates>
@@ -145,8 +147,8 @@ Notice
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>488</x>
-      <y>480</y>
+      <x>720</x>
+      <y>488</y>
       <w>248</w>
       <h>88</h>
     </coordinates>
@@ -161,8 +163,8 @@ of the principal who has posted the note and
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>592</x>
-      <y>448</y>
+      <x>824</x>
+      <y>456</y>
       <w>24</w>
       <h>48</h>
     </coordinates>
@@ -196,14 +198,15 @@ Banner
     <coordinates>
       <x>496</x>
       <y>208</y>
-      <w>200</w>
-      <h>72</h>
+      <w>208</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>bg=pink
 displayPeriod must start at any
 moment after the instantiation/update
 moment and must last for at least
-one week</panel_attributes>
+one week and displayPeriodStart must
+be prior to displayPeriodEnd.</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -229,7 +232,7 @@ one week</panel_attributes>
 &lt;&lt;Form&gt;&gt;
 AdministratorDashboard
 --
-+ totalNumberOfPrincipalsByRole: Map&lt;String, Integer&gt;
++ totalNumberOfPrincipalsByRole: Map&lt;String, int&gt;
 + ratioOfNoticesBothEmailLink: Double
 + ratioOfCriticalNonCriticalObjectives: Map&lt;String, Double&gt;
 + averageValueInRisks: Double
@@ -240,6 +243,24 @@ AdministratorDashboard
 + minimumNumberOfClaimsPostedLast10Weeks: Integer
 + maximumNumberOfClaimsPostedLast10Weeks: Integer
 + standardDeviationNumberOfClaimsPostedLast10Weeks: Double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>304</y>
+      <w>128</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+ObjectivePriority
+--
++ LOW
++ MEDIUM
++ HIGH
+bg=green
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
