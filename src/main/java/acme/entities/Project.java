@@ -29,7 +29,7 @@ public class Project extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "[A-Z]{3}-\\d{4}")
+	@Pattern(regexp = "^[A-Z]{3}-\\d{4}$")
 	private String				code;
 
 	@NotBlank
