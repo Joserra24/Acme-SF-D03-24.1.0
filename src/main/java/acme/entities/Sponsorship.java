@@ -5,6 +5,7 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -43,8 +44,8 @@ public class Sponsorship extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				moment;
 
-	// duration must start must start at any moment after the instantiation/update moment and must last for at least
-	// one week. This requirement will be implemented soon.
+	// duration must start after moment and must last for at least one month and durationStart must be prior to
+	// durationEnd. This requirement will be implemented soon.
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				durationStart;
@@ -53,6 +54,7 @@ public class Sponsorship extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				durationEnd;
 
+	// amount must be positive. This requirement will be implemented soon.
 	@Valid
 	@NotNull
 	private Money				amount;
@@ -69,5 +71,10 @@ public class Sponsorship extends AbstractEntity {
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Project				project;
 
 }
