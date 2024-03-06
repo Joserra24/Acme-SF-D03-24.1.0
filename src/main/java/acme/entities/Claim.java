@@ -30,7 +30,6 @@ public class Claim extends AbstractEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
-	@NotNull
 	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "C-\\d{4}")
@@ -41,17 +40,14 @@ public class Claim extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				instantiationMoment;
 
-	@NotNull
 	@NotBlank
 	@Length(max = 75)
 	private String				heading;
 
-	@NotNull
 	@NotBlank
 	@Length(max = 100)
 	private String				description;
 
-	@NotNull
 	@NotBlank
 	@Length(max = 100)
 	private String				departament;
