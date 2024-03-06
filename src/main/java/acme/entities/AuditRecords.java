@@ -32,9 +32,8 @@ public class AuditRecords extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
-	//Atributes ---------------------------------------------------------------
+	// Atributes ---------------------------------------------------------------
 
-	@NotNull
 	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "^AU-[0-9]{4}-[0-9]{3}$")
@@ -52,8 +51,10 @@ public class AuditRecords extends AbstractEntity {
 	@URL
 	private String				optionalLink;
 
+	// Relationships ----------------------------------------------------------
+
 	@ManyToOne
 	@Valid
 	@NotNull
-	private List<CodeAudits>			codeAudits;
+	private List<CodeAudits>	codeAudits;
 }

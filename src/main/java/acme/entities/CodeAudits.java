@@ -2,7 +2,6 @@
 package acme.entities;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -32,7 +31,6 @@ public class CodeAudits extends AbstractEntity {
 
 	//Atributes ---------------------------------------------------------------
 
-	@NotNull
 	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "^[A-Z]{1,3}-[0-9]{3}$")
@@ -45,10 +43,9 @@ public class CodeAudits extends AbstractEntity {
 	@NotNull
 	private Type				type;
 
-	@NotNull
 	@NotBlank
 	@Length(max = 101)
-	private List<String>		corrective_actions;
+	private String				corrective_actions;
 
 	@URL
 	private String				optionalLink;
