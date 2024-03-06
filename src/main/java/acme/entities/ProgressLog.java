@@ -1,14 +1,14 @@
 
 package acme.entities;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.DecimalMax;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -33,18 +33,15 @@ public class ProgressLog extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotNull
 	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "^PG-[A-Z]{1,2}-[0-9]{4}$")
 	private String				recordId;
 
-	@NotNull
 	@Positive
 	@DecimalMax(value = "1.0", inclusive = true)
-	private Double				completeness;
+	private double				completeness;
 
-	@NotNull
 	@NotBlank
 	@Length(max = 100)
 	private String				comment;
@@ -52,9 +49,8 @@ public class ProgressLog extends AbstractEntity {
 	@NotNull
 	@Past
 	@Temporal(TemporalType.TIMESTAMP)
-	private LocalDateTime		registrationMoment;
+	private Date				registrationMoment;
 
-	@NotNull
 	@NotBlank
 	@Length(max = 75)
 	private String				responsiblePerson;
@@ -63,8 +59,9 @@ public class ProgressLog extends AbstractEntity {
 
 	// Relationships ----------------------------------------------------------
 
-	@ManyToOne
-	@JoinColumn(name = "contract_id", nullable = false)
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
 	private Contract			contract;
 
 }
