@@ -7,9 +7,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
@@ -36,9 +38,9 @@ public class Risk extends AbstractEntity {
 	@Pattern(regexp = "R-[0-9]{3}")
 	private String				reference;
 
+	@Past
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	@Length(max = 255)
 	private Date				identificationDate;
 
 	@Min(0)
@@ -46,10 +48,6 @@ public class Risk extends AbstractEntity {
 
 	@Range(min = 0, max = 100)
 	private int					probability;
-
-	// Value must be the result of the multiplication of impact and probability.
-	// This requirement will be implemented soon.
-	private double				value;
 
 	@NotBlank
 	@Length(max = 100)
@@ -59,6 +57,16 @@ public class Risk extends AbstractEntity {
 	private String				link;
 
 	// Derived attributes -----------------------------------------------------
+
+
+	@Transient
+	private double value() {
+		double result;
+
+		result = this.impact * (this.probability / 100.0);
+
+		return result;
+	}
 
 	// Relationships ----------------------------------------------------------
 
