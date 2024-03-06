@@ -9,54 +9,63 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
-import org.hibernate.validator.constraints.time.DurationMin;
 
 import acme.client.data.AbstractEntity;
-import acme.enumerated.Mark;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class AuditRecords extends AbstractEntity {
+public class TrainingSession extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
 	private static final long	serialVersionUID	= 1L;
 
-	// Atributes ---------------------------------------------------------------
+	// Attributes -------------------------------------------------------------
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^AU-[0-9]{4}-[0-9]{3}$")
+	@Pattern(regexp = "TS-[A-Z]{1,3}-\\d{3}")
 	private String				code;
 
+	//El periodo debe crearse con al menos una semana de antelación y tiene que durar como minimo una semana.
 	@NotNull
-	@Past
 	@Temporal(TemporalType.TIMESTAMP)
-	@DurationMin(hours = 1)
-	private Date				period;
+	private Date				startPeriod;
 
 	@NotNull
-	private Mark				mark;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				endPeriod;
+
+	@NotBlank
+	@Length(max = 75)
+	private String				location;
+
+	@NotBlank
+	@Length(max = 75)
+	private String				instructor;
+
+	@NotNull
+	@Email
+	private String				email;
 
 	@URL
-	private String				optionalLink;
+	@Length(max = 255)
+	private String				link;
 
-	// Derived attributes -----------------------------------------------------
-
-	// Relationships ----------------------------------------------------------
+	// Relations  -------------------------------------------------------------
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private CodeAudits			codeAudits;
-
+	private TrainingModule		trainingModule;
 }
