@@ -1,0 +1,11 @@
+key,code,start-period,end-period,location,instructor,email,link,key:training-module
+training-session-01,TS-KIL-425,2022/05/22 22:00,2024/03/26 08:00,aggdsfsdfadsg,jasjasjajajajsjasjsa,trainingsession01@gmail.com,https://es.vietnamplus.vn/agilizan-intercambio-pueblo-a-pueblo-entre-vietnam-y-eeuu/193397,training-module-01
+training-session-02,TS-LOP-987,2023/04/23 21:00,2024/05/23 22:00,abcde12345,John Doe,johndoe@example.com,https://example.com/training-session-02,training-module-02
+training-session-03,TS-QWE-456,2022/01/15 10:00,2023/06/30 15:00,xyz987654,mariagarcia@example.com,mgarcia@example.com,https://example.com/training-session-03,training-module-03
+training-session-04,TS-ZXC-789,2022/11/11 11:11,2023/12/12 12:12,location123,John Smith,johnsmith@example.com,https://example.com/training-session-04,training-module-04
+training-session-05,TS-POI-321,2023/07/07 07:07,2024/08/08 08:08,example_location,Emily Johnson,emilyjohnson@example.com,https://example.com/training-session-05,training-module-05
+training-session-06,TS-ASD-654,2022/09/30 09:30,2023/10/31 10:30,random_location,David Brown,davidbrown@example.com,https://example.com/training-session-06,training-module-06
+training-session-07,TS-UIO-987,2023/02/20 20:20,2024/03/21 21:21,test_location,Jennifer Lee,jenniferlee@example.com,https://example.com/training-session-07,training-module-07
+training-session-08,TS-YUI-234,2022/04/19 19:19,2023/05/20 20:20,training_room123,Michael Clark,michaelclark@example.com,https://example.com/training-session-08,training-module-08
+training-session-09,TS-HJK-567,2022/08/18 18:18,2023/09/19 19:19,classroom456,Sarah Adams,sarahadams@example.com,https://example.com/training-session-09,training-module-09
+training-session-10,TS-BNM-890,2023/01/17 17:17,2024/02/18 18:18,meeting_room789,James Wilson,jameswilson@example.com,https://example.com/training-session-10,training-module-10

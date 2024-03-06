@@ -1,0 +1,16 @@
+key,code,creation-moment,details,difficulty-level,update-moment,link,estimated-total-time,key:project,key:developer
+training-module-01,JKY-746,2000/04/23 21:00,ppppppppppppppppp,BASIC,2001/05/23 22:00,https://es.wikipedia.org/wiki/Wikipedia,58,project-01,developer-01
+training-module-02,KKI-879,2000/05/22 22:00,fdkafldansfjadsnfjdanfjdsnfadsjfnjlasdfadsnfa,INTERMEDIATE,2001/06/24 21:00,null,68,project-02,developer-02
+training-module-03,OPN-345,2000/06/21 23:00,fjansjfadnsfjnasdlfadsnfjldnfjlsadnljasdnfs,ADVANCED,2001/07/25 20:00,https://pandas.pydata.org/,78,project-03,developer-01
+training-module-04,ASD-123,2000/07/20 00:00,rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr,ADVANCED,2001/08/26 19:00,null,88,project-04,developer-02
+training-module-05,KLD-332,2000/08/19 15:00,s,INTERMEDIATE,2001/09/27 18:00,null,98,project-05,developer-01
+training-module-06,POI-987,2000/09/15 12:00,lorem ipsum dolor sit amet consectetur adipiscing elit,INTERMEDIATE,2001/10/28 17:00,https://github.com/,48,project-01,developer-02
+training-module-07,TYU-456,2000/10/12 18:00,suspendisse potenti nullam ac tortor vitae purus faucibus ornare,ADVANCED,2001/11/29 16:00,https://www.python.org/,58,project-02,developer-01
+training-module-08,BVC-123,2000/11/09 10:00,ut efficitur justo id risus tempus convallis,INTERMEDIATE,2001/12/30 15:00,null,68,project-03,developer-02
+training-module-09,QWE-789,2000/12/06 06:00,nunc consequat urna id nibh convallis tristique,ADVANCED,2001/01/31 14:00,https://www.tensorflow.org/,78,project-04,developer-01
+training-module-10,ZXC-567,2000/01/03 03:00,nullam et sem nec odio fermentum aliquam,INTERMEDIATE,2001/02/01 13:00,null,88,project-05,developer-02
+training-module-11,RTY-234,2000/02/28 14:00,morbi vestibulum turpis nec bibendum cursus,ADVANCED,2001/03/02 12:00,https://scikit-learn.org/,98,project-01,developer-01
+training-module-12,FVB-890,2000/03/26 08:00,dtrdtdrtdr,INTERMEDIATE,2001/04/03 11:00,null,48,project-02,developer-02
+training-module-13,UIO-765,2000/04/23 21:00,phasellus efficitur dolor sit amet ligula mollis luctus,ADVANCED,2001/05/04 10:00,https://www.nltk.org/,58,project-03,developer-01
+training-module-14,HJK-321,2000/05/22 22:00,curabitur sed massa vel nulla maximus vestibulum,INTERMEDIATE,2001/06/05 09:00,null,68,project-04,developer-02
+training-module-15,LKM-654,2000/06/21 23:00,fusce eget mi id velit fermentum elementum ac nec elit,ADVANCED,2001/07/06 08:00,https://keras.io/,78,project-05,developer-01
