@@ -11,15 +11,15 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
+import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.PositiveOrZero;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
 import acme.enumerated.DifficultyLevel;
+import acme.roles.Developer;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -34,18 +34,16 @@ public class TrainingModule extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotNull
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "[A-Z]{1,3}-\\d{3}")
+	@Pattern(regexp = "^[A-Z]{1,3}-\\d{3}$")
 	private String				code;
 
-	@Past
+	@PastOrPresent
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				creationMoment;
 
-	@NotNull
 	@NotBlank
 	@Length(max = 100)
 	private String				details;
@@ -53,7 +51,7 @@ public class TrainingModule extends AbstractEntity {
 	@NotNull
 	private DifficultyLevel		difficultyLevel;
 
-	@Past
+	@PastOrPresent
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				updateMoment;
@@ -62,11 +60,9 @@ public class TrainingModule extends AbstractEntity {
 	@Length(max = 255)
 	private String				link;
 
-	// Derived attributes -------------------------------------------------------------
+	// Derived attributes --------------------------------------------------------
 
-	@NotNull
-	@PositiveOrZero
-	private Double				estimatedTotalTime;
+	private int					estimatedTotalTime;
 
 	// Relationships -------------------------------------------------------------
 	@NotNull
@@ -74,4 +70,8 @@ public class TrainingModule extends AbstractEntity {
 	@ManyToOne(optional = false)
 	private Project				project;
 
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Developer			developer;
 }
