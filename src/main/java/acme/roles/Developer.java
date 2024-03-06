@@ -1,9 +1,6 @@
 
 package acme.roles;
 
-import java.util.List;
-
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -36,8 +33,7 @@ public class Developer extends AbstractRole {
 
 	@NotBlank
 	@Length(max = 100)
-	@ElementCollection
-	private List<String>		skills;
+	private String				skills;
 
 	@NotBlank
 	@Email
