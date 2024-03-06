@@ -1,0 +1,8 @@
+key,instantiation-moment,title,description,priority,status,duration-start,duration-end,link
+objective-01,2024/03/06 08:00,Finish project proposal,Complete the project proposal for the upcoming presentation.,HIGH,true,2024/03/06 08:00,2024/03/10 17:00,https://example.com/proposal
+objective-02,2024/03/06 10:30,Study for exam,Prepare for the upcoming exam by reviewing notes and completing practice questions.,MEDIUM,false,2024/03/06 18:00,2024/03/09 22:00,https://example.com/exam-study
+objective-03,2024/03/06 14:00,Complete coding assignment,Finish coding assignment by implementing the required functionalities.,LOW,false,2024/03/06 14:00,2024/03/08 23:59:59,https://example.com/coding-assignment
+objective-04,2024/03/06 09:45,Write report on market analysis,Prepare a comprehensive report analyzing the current market trends and competition.,MEDIUM,false,2024/03/06 10:00,2024/03/09 16:00,https://example.com/market-analysis
+objective-05,2024/03/06 13:30,Develop prototype for new feature,Work on developing a prototype to demonstrate the functionality of the new feature.,HIGH,false,2024/03/06 14:00,2024/03/08 18:00,null
+objective-06,2024/03/06 15:20,Revise presentation slides,Review and update presentation slides to ensure clarity and effectiveness.,LOW,false,2024/03/06 15:30,2024/03/07 12:00,null
+objective-07,2024/03/06 11:00,Conduct user testing session,Organize and conduct a user testing session to gather feedback on the new product features.,MEDIUM,false,2024/03/06 12:00,2024/03/08 15:00,null
