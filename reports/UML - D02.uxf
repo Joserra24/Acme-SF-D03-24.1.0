@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>0</y>
+      <w>550</w>
+      <h>187</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Claim
+--
++ code: String {Pattern(“^C-[0-9]{4}$”), NotBlank, Unique}
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), PastOrPresent}
++ heading: String {NotBlank, Length(max=75)}
++ description: String {NotBlank, Length(max=100)}
++ department: String {NotBlank, Length(max=100)}
++ email: String {Email}
++ link: String {URL, Length(max = 255)} 
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>209</y>
+      <w>550</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Objective
+--
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), PastOrPresent}
++ title: String {NotBlank, Length(max=75)}
++ description: String {NotBlank, Length(max=100)}
++ priority: ObjectivePriority {NotNull}
++ status: boolean
++ durationStart: Date {NotNull, Temporal(TIMESTAMP)}
++ durationEnd: Date {NotNull, Temporal(TIMESTAMP)}
++ link: String {URL, Length(max = 255)}
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>286</x>
+      <y>429</y>
+      <w>264</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>bg=pink
+durationStart must be any moment
+after the instantiation moment and
+durationStart must be prior to
+durationEnd.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>407</x>
+      <y>396</y>
+      <w>33</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>550</y>
+      <w>539</w>
+      <h>187</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Risk
+--
++ reference: String {Pattern(“^R-[0-9]{3}$”), NotBlank, Unique}
++ identificationDate: Date {NotNull, Temporal(TIMESTAMP), PastOrPresent}
++ impact: double {Min(0)}
++ probability: double {Range(0,100)}
++ / value: double {Transient}
++ description: String {NotBlank, Length(max=100)}
++ link: String {URL, Length(max = 255)} 
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>264</x>
+      <y>770</y>
+      <w>264</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>bg=pink
+value must be the result of the
+multiplication of impact and
+probability</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>385</x>
+      <y>726</y>
+      <w>33</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1045</x>
+      <y>374</y>
+      <w>594</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Notice
+--
++ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), PastOrPresent}
++ title: String {NotBlank, Length(max=75)}
++ author: String {Pattern(regexp = "^[^-]+ - [^,]+, [^,]+$"), NotBlank, Length(max=75)}
++ message: String {NotBlank, Length(max=100)}
++ email: String {Email}
++ link: String {URL, Length(max = 255)} 
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1122</x>
+      <y>583</y>
+      <w>341</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>bg=pink
+The author must be computed as follows: 
+“〈username〉 - 〈surname, name〉”, 
+where “〈user-name〉” denotes the username 
+of the principal who has posted the note and 
+“〈surname, name〉” denotes his or her full name</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1265</x>
+      <y>539</y>
+      <w>33</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>704</x>
+      <y>0</y>
+      <w>550</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Banner
+--
++ instationUpdateMoment: Date {NotNull, Temporal(TIMESTAMP), PastOrPresent}
++ periodStart: Date {NotNull, Temporal(TIMESTAMP)}
++ periodEnd: Date {NotNull, Temporal(TIMESTAMP)}
++ linkPicture: String {NotBlank, URL, Length(max = 255)}
++ slogan: String {NotBlank, Length(max=75)}
++ linkDocument: String {NotBlank, URL, Length(max = 255)} 
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>814</x>
+      <y>198</y>
+      <w>286</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>bg=pink
+periodStart must start at any
+moment after the instantiation/update
+moment and must last for at least
+one week and periodStart must
+be prior to periodEnd.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>924</x>
+      <y>165</y>
+      <w>33</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1320</x>
+      <y>0</y>
+      <w>330</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Form&gt;&gt;
+AdministratorDashboard
+--
++ totalPrincipalEachRole: Map&lt;String, int&gt;
++ ratioOfNoticesWithEmailAndLink‎: Double
++ ratioOfCriticalObjectives: Double
++ / ratioOfNotCriticalObjectives: Double
++ avgValueRisk: Double
++ minValueRisk: Double
++ maxValueRisk: Double
++ devValueRisk: Double
++ avgClaimsOverLastTenWeeks: Double
++ minClaimsOverLastTenWeeks: Integer
++ maxClaimsOverLastTenWeeks: Integer
++ devClaimsOverLastTenWeeks: Double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>693</x>
+      <y>330</y>
+      <w>176</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+ObjectivePriority
+--
++ LOW
++ MEDIUM
++ HIGH
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
