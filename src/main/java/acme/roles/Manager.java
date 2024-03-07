@@ -1,12 +1,8 @@
 
 package acme.roles;
 
-import java.util.List;
-
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -25,21 +21,17 @@ public class Manager extends AbstractRole {
 	private static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
-	@NotNull
 	@NotBlank
 	@Length(max = 75)
 	private String				degree;
 
-	@NotNull
 	@NotBlank
 	@Length(max = 100)
 	private String				overview;
 
-	@NotNull
 	@NotBlank
 	@Length(max = 100)
-	@ElementCollection
-	private List<String>		certifications;
+	private String				certifications;
 
 	@URL
 	@Length(max = 255)
