@@ -12,7 +12,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
+import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.URL;
@@ -36,16 +36,16 @@ public class Sponsorship extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "[A-Z]{1,3}-[0-9]{3}")
+	@Pattern(regexp = "^[A-Z]{1,3}-[0-9]{3}$")
 	private String				code;
 
-	@Past
+	@PastOrPresent
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				moment;
 
-	// duration must start after moment and must last for at least one month and durationStart must be prior to
-	// durationEnd. This requirement will be implemented soon.
+	// Must be after moment, must last for at least one month and  must be prior to durationEnd.
+	// This requirements will be implemented soon.
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				durationStart;
@@ -54,7 +54,7 @@ public class Sponsorship extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				durationEnd;
 
-	// amount must be positive. This requirement will be implemented soon.
+	// Must be positive. This requirement will be implemented soon.
 	@Valid
 	@NotNull
 	private Money				amount;

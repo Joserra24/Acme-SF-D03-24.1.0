@@ -12,7 +12,7 @@ import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
+import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Range;
@@ -39,28 +39,23 @@ public class Invoice extends AbstractEntity {
 	@Pattern(regexp = "^IN-[0-9]{4}-[0-9]{4}$")
 	private String				code;
 
-	@Past
+	@PastOrPresent
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				registrationTime;
 
-	// must be at least one month ahead the registration time. This requirement will be implemented soon.
+	// Must be at least one month ahead the registration time. This requirement will be implemented soon.
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				dueDate;
 
+	// Must positive and not nought. This requirement will be implemented soon.
 	@Valid
 	@NotNull
 	private Money				quantity;
 
-	@NotNull
 	@Range(min = 0, max = 100)
 	private double				tax;
-
-	// The total amount is calculated by adding together the quantity and the tax applied.
-	// This requirement will be implemented soon.
-	@NotNull
-	private double				totalAmount;
 
 	@URL
 	private String				link;
@@ -71,6 +66,9 @@ public class Invoice extends AbstractEntity {
 	@Transient
 	private double totalAmount() {
 		double result;
+
+		double amount = this.quantity.getAmount();
+		result = amount + amount * (this.tax / 100.0);
 
 		return result;
 	}
