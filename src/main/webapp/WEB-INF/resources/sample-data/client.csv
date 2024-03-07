@@ -1,0 +1,3 @@
+key,key:userAccount,identification,companyName,type,email,link
+client-01,user-account-client-01,CLI-2006,Example Company 1,COMPANY,client1email@example.com,null
+client-02,user-account-client-02,CLI-2907,Imaginary company,INDIVIDUAL,client2@imgco.com,null
