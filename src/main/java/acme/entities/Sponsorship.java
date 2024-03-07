@@ -15,6 +15,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
@@ -44,12 +45,12 @@ public class Sponsorship extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				moment;
 
-	// Must be after moment, must last for at least one month and  must be prior to durationEnd.
-	// This requirements will be implemented soon.
+	// Must be after moment and  must be prior to durationEnd. This requirements will be implemented soon.
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				durationStart;
 
+	// Must be at least one month later than durationStart. This requirements will be implemented soon.
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				durationEnd;
@@ -66,6 +67,7 @@ public class Sponsorship extends AbstractEntity {
 	private String				email;
 
 	@URL
+	@Length(max = 255)
 	private String				link;
 
 	// Derived attributes -----------------------------------------------------
