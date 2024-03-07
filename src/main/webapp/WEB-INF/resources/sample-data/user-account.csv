@@ -9,3 +9,5 @@ user-account-developer-01,true,"UserIdentity{name: 'Jose', surname: 'Developer',
 user-account-developer-02,true,"UserIdentity{name: 'Ramon', surname: 'Banos', email: 'developer@acme.com'}",developer2,developer2
 user-account-administrator-02,true,"UserIdentity{name: 'Administrator1', surname: 'Acme', email: 'administrator1@acme.com'}",administrator1,administrator1
 user-account-administrator-03,true,"UserIdentity{name: 'Administrator2', surname: 'Acme', email: 'administrator2@acme.com'}",administrator2,administrator2
+user-account-client-01,true,"UserIdentity{name: 'Ruben', surname: 'Perez', email: 'client1email@example.com'}",client1,client1
+user-account-client-02,true,"UserIdentity{name: 'Paco', surname: 'Garrido', email: 'client2@imgco.com'}",client2,client2

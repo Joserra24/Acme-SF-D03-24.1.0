@@ -1,0 +1,6 @@
+key,recordId,completeness,comment,registrationMoment,responsiblePerson,key:contract
+progresslog-01,PG-AB-0001,0.75,Close ending,2003/03/06 12:00,Persona Responsable 1,contract-01
+progresslog-02,PG-CD-0002,1.0,Tarea completada,2002/03/07 14:30,Responsible Person 2,contract-02
+progresslog-03,PG-EF-0003,0.5,Half way done,2001/03/08 16:45,asdasdasd qwerty,contract-03
+progresslog-04,PG-ZZ-0004,0.00000000000001,Aasdioi af(/&589=d,2003/07/29 09:15,Responsible Person #4,contract-04
+progresslog-05,PG-KK-0005,0.9999,a,1999/03/10 10:30,@#%$#@!^,contract-05
