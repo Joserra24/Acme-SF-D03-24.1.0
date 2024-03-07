@@ -1,0 +1,8 @@
+key,instation-update-moment,period-start,period-finish,link-picture,slogan,link-document
+banner-01,2003/06/12 07:00,2003/06/12 08:00,2003/06/16 12:00,https://example.com/image1.jpg,Disfruta como eres,https://example.com/document1.pdf
+banner-02,2003/06/15 09:00,2003/06/16 10:00,2003/06/20 15:00,https://example.com/image2.jpg,Descubre nuevas aventuras,https://example.com/document2.pdf
+banner-03,2003/06/18 11:00,2003/06/20 13:00,2003/06/25 18:00,https://example.com/image3.jpg,Encuentra tu pasión,https://example.com/document3.pdf
+banner-04,2003/06/22 14:00,2003/06/24 16:00,2003/06/29 20:00,https://example.com/image4.jpg,Explora lo desconocido,https://example.com/document4.pdf
+banner-05,2003/06/25 17:00,2003/06/27 19:00,2003/07/02 23:00,https://example.com/image5.jpg,Conéctate con la naturaleza,https://example.com/document5.pdf
+banner-06,2003/06/28 20:00,2003/06/30 22:00,2003/07/05 03:00,https://example.com/image6.jpg,Desafía tus límites,https://example.com/document6.pdf
+banner-07,2003/07/01 23:00,2003/07/03 01:00,2003/07/08 06:00,https://example.com/image7.jpg,Vive el momento,https://example.com/document7.pdf
