@@ -36,7 +36,7 @@ public class Invoice extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^IN-[0-9]{4}-[0-9]{4}$")
+	@Pattern(regexp = "^IN-\\d{4}-\\d{4}$")
 	private String				code;
 
 	@PastOrPresent
