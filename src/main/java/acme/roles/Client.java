@@ -29,7 +29,7 @@ public class Client extends AbstractRole {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^CLI-[0-9]{4}$")
+	@Pattern(regexp = "^CLI-\\d{4}$")
 	private String				identification;
 
 	@NotBlank
