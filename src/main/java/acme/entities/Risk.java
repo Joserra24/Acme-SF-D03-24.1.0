@@ -47,7 +47,7 @@ public class Risk extends AbstractEntity {
 	private double				impact;
 
 	@Range(min = 0, max = 100)
-	private int					probability;
+	private double				probability;
 
 	@NotBlank
 	@Length(max = 100)
