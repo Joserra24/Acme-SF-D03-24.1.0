@@ -21,6 +21,7 @@ import org.hibernate.validator.constraints.URL;
 import acme.client.data.AbstractEntity;
 import acme.client.data.datatypes.Money;
 import acme.enumerated.ProjectType;
+import acme.roles.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -45,7 +46,7 @@ public class Sponsorship extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				moment;
 
-	// Must be after moment and  must be prior to durationEnd. This requirements will be implemented soon.
+	// Must be after moment. This requirements will be implemented soon.
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				durationStart;
@@ -70,6 +71,8 @@ public class Sponsorship extends AbstractEntity {
 	@Length(max = 255)
 	private String				link;
 
+	private boolean				draftMode;
+
 	// Derived attributes -----------------------------------------------------
 
 	// Relationships ----------------------------------------------------------
@@ -78,5 +81,10 @@ public class Sponsorship extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Project				project;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Sponsor				sponsor;
 
 }
