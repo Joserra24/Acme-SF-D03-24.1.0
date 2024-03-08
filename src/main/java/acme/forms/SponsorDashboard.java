@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ManagerDashboard extends AbstractForm {
+public class SponsorDashboard extends AbstractForm {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -15,20 +15,18 @@ public class ManagerDashboard extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	int							totalMustUserStory;
-	int							totalShouldUserStory;
-	int							totalCouldUserStory;
-	int							totalWontUserStory;
+	int							numberOfInvoicesTaxLessEqual21;
+	int							numberSponsorshipsWithLink;
 
-	Double						avgEstimatedCostUserStory;
-	Double						devEstimatedCostUserStory;
-	Double						minEstimatedCostUserStory;
-	Double						maxEstimatedCostUserStory;
+	Double						averageAmountSponsorships;
+	Double						deviationAmountSponsorships;
+	Double						minimumAmountSponsorships;
+	Double						maximumAmountSponsorships;
 
-	Double						avgCostProject;
-	Double						devCostProject;
-	Double						minCostProject;
-	Double						maxCostProject;
+	Double						averageQuantityInvoices;
+	Double						deviationQuantityInvoices;
+	Double						minimumQuantityInvoices;
+	Double						maximumQuantityInvoices;
 
 	// Derived attributes -----------------------------------------------------
 
