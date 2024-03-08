@@ -1,0 +1,6 @@
+key,code,initial-period,final-period,mark,optional-link,key:code-audit
+audit-record-01,AU-0123-456,2002/06/11 09:30,2002/07/11 10:30,A,https://www.flashscore.es/,code-audit-01
+audit-record-02,AU-7890-321,2002/06/12 10:00,2002/07/12 11:00,B,https://www.sportingnews.com/,code-audit-02
+audit-record-03,AU-4567-890,2002/06/13 11:30,2002/07/13 12:30,C,https://www.espn.com/,code-audit-03
+audit-record-04,AU-1234-567,2002/06/14 12:00,2002/07/14 13:00,F,https://www.bbc.com/,code-audit-04
+audit-record-05,AU-8901-234,2002/06/15 13:30,2002/07/15 14:30,F_MINUS,https://www.cnn.com/,code-audit-05
