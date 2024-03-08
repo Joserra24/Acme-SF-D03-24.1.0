@@ -17,7 +17,7 @@ public class AdministratorDashboard extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	Map<String, int>		totalPrincipalEachRole;
+	Map<String, Integer>		totalPrincipalEachRole;
 	Double						ratioOfNoticesWithEmailAndLink;
 	Double						ratioOfCriticalObjectives;
 
