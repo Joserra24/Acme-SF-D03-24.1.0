@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>232</y>
+      <w>384</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+TrainingModule
+--
++ code: String {Pattern(“^[A-Z]{1,3}-\\d{3}$”), NotBlank, Unique}
++ creationMoment: Date {PastOrPresent, NotNull, Temporal(TIMESTAMP)}
++ details: String {NotBlank,Length(max = 100)}
++ difficultyLevel: DifficultyLevel {NotNull}
++ updateMoment: Date {PastOrPresent, NotNull, Temporal(TIMESTAMP)}
++ link: String {URL, Length(max=255)} 
++ / estimatedTotalTime: int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>88</x>
+      <y>288</y>
+      <w>152</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>bg=pink
+updatedMoment in the past, 
+after the creation 
+moment.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>232</x>
+      <y>296</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>112</x>
+      <y>368</y>
+      <w>128</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+DifficultyLevel
+--
++ BASIC
++ INTERMEDIATE
++ ADVANCED
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>728</x>
+      <y>240</y>
+      <w>352</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+TrainingSession
+--
++ code: String {Pattern(“^TS-[A-Z]{1,3}-\\d{3}$”), NotBlank, Unique}
++ startPeriod: Date {NotNull, Temporal(TIMESTAMP)}
++ endPeriod: Date {NotNull, Temporal(TIMESTAMP)}
++ location: String {NotBlank, Length(max = 75)}
++ instructor: String {NotBlank, Length(max = 75)}
++ email: String {NotNull, Email}
++ link: String {URL, Length(max=255)} 
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>736</x>
+      <y>24</y>
+      <w>248</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Form&gt;&gt;
+DeveloperDashboard
+--
++ totalTrainingModulesWithUpdateMoment: int
++ totalTrainingSessionsWithLink: int
++ avgTimeTrainigModule: Double
++ devTimeTrainigModule: Double
++ minTimeTrainigModule: Double
++ maxTimeTrainigModule: Double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>296</x>
+      <y>504</y>
+      <w>248</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+Developer
+--
++ degree: String {NotBlank, Length(max=75)}
++ specialisation: String {NotBlank, Length(max=100)}
++ skills: String {NotBlank, Length(max=100)}
++ email: String {NotBlank, Email}
++ link: String {URL, Length(max=255)}
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>232</x>
+      <y>248</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>88</x>
+      <y>232</y>
+      <w>152</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>bg=pink
+creationMoment: in the 
+past.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>720</x>
+      <y>400</y>
+      <w>160</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>bg=pink
+period  (at least one week 
+ahead the training module  
+creation moment, at least one 
+week long.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>784</x>
+      <y>360</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>272</x>
+      <y>24</y>
+      <w>320</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>bg=green
+&lt;&lt;Entity&gt;&gt;
+Project
+--
++ code: String {Pattern(“^[A-Z]{3}-\\d{4}$”), NotBlank, Unique}
++ title: String {NotBlank, Length(max=75)}
++ $abstract: String {NotBlank, Length(max=100)}
++ cost: int
++ link: String {URL, Length(max=255)}
++ draftMode: boolean
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>416</x>
+      <y>352</y>
+      <w>104</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=0..*
+m2=1
+Registered by v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>416</x>
+      <y>136</y>
+      <w>88</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=*
+m2=1
+Related to ^</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>288</y>
+      <w>104</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=x-&gt;
+m1=*
+m2=1
+</panel_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>
