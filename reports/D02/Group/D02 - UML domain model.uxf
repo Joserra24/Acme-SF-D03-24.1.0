@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>9</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>45</y>
-      <w>450</w>
-      <h>153</h>
+      <y>108</y>
+      <w>300</w>
+      <h>102</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
@@ -28,9 +28,9 @@ Claim
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>216</y>
-      <w>450</w>
-      <h>162</h>
+      <y>222</y>
+      <w>300</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
@@ -51,10 +51,10 @@ Objective
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>144</x>
-      <y>396</y>
-      <w>216</w>
-      <h>72</h>
+      <x>96</x>
+      <y>342</y>
+      <w>144</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>bg=pink
 durationStart must be any moment
@@ -66,10 +66,10 @@ durationEnd.</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>243</x>
-      <y>369</y>
-      <w>27</w>
-      <h>45</h>
+      <x>162</x>
+      <y>324</y>
+      <w>18</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
@@ -78,9 +78,9 @@ durationEnd.</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>495</y>
-      <w>441</w>
-      <h>153</h>
+      <y>408</y>
+      <w>294</w>
+      <h>102</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
@@ -100,10 +100,10 @@ Risk
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>126</x>
-      <y>675</y>
-      <w>216</w>
-      <h>54</h>
+      <x>84</x>
+      <y>528</y>
+      <w>144</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>bg=pink
 value must be the result of the
@@ -114,10 +114,10 @@ probability</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>225</x>
-      <y>639</y>
-      <w>27</w>
-      <h>54</h>
+      <x>150</x>
+      <y>504</y>
+      <w>18</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
@@ -125,10 +125,10 @@ probability</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>765</x>
-      <y>351</y>
-      <w>486</w>
-      <h>144</h>
+      <x>510</x>
+      <y>312</y>
+      <w>324</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
@@ -147,10 +147,10 @@ Notice
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>828</x>
-      <y>522</y>
-      <w>279</w>
-      <h>99</h>
+      <x>552</x>
+      <y>426</y>
+      <w>186</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>bg=pink
 The author must be computed as follows: 
@@ -163,10 +163,10 @@ of the principal who has posted the note and
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>945</x>
-      <y>486</y>
-      <w>27</w>
-      <h>54</h>
+      <x>630</x>
+      <y>402</y>
+      <w>18</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
@@ -174,10 +174,10 @@ of the principal who has posted the note and
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>486</x>
-      <y>45</y>
-      <w>450</w>
-      <h>144</h>
+      <x>324</x>
+      <y>108</y>
+      <w>300</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Entity&gt;&gt;
@@ -196,10 +196,10 @@ Banner
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>576</x>
-      <y>207</y>
-      <w>234</w>
-      <h>90</h>
+      <x>384</x>
+      <y>216</y>
+      <w>156</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>bg=pink
 periodStart must start at any
@@ -212,10 +212,10 @@ be prior to periodEnd.</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>666</x>
-      <y>180</y>
-      <w>27</w>
-      <h>45</h>
+      <x>444</x>
+      <y>198</y>
+      <w>18</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=-</panel_attributes>
     <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
@@ -223,10 +223,10 @@ be prior to periodEnd.</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>990</x>
-      <y>45</y>
-      <w>279</w>
-      <h>216</h>
+      <x>660</x>
+      <y>108</y>
+      <w>186</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>bg=green
 &lt;&lt;Form&gt;&gt;
@@ -249,10 +249,10 @@ AdministratorDashboard
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>477</x>
-      <y>315</y>
-      <w>144</w>
-      <h>99</h>
+      <x>318</x>
+      <y>288</y>
+      <w>96</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 ObjectivePriority
