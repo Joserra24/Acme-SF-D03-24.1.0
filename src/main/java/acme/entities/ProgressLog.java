@@ -10,6 +10,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
@@ -39,6 +40,7 @@ public class ProgressLog extends AbstractEntity {
 	private String				recordId;
 
 	@Positive
+	@DecimalMin(value = "0.0", inclusive = true)
 	@DecimalMax(value = "1.0", inclusive = true)
 	private double				completeness;
 
