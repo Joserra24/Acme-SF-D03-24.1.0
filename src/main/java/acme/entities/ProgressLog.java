@@ -20,6 +20,7 @@ import javax.validation.constraints.Positive;
 import org.hibernate.validator.constraints.Length;
 
 import acme.client.data.AbstractEntity;
+import acme.roles.Client;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -65,5 +66,10 @@ public class ProgressLog extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Contract			contract;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Client				client;
 
 }
