@@ -34,3 +34,6 @@ contract-32,ABC-032,2000/04/23 21:00,Lorem ipsum,Lorem ipsum,'A'='A',"EUR 1,000.
 contract-33,ABC-033,2000/04/23 21:00,Lorem ipsum,Lorem ipsum,SELECT ua FROM UserAccount ua,"EUR 1,000.00",project-01,client-01
 contract-34,ABC-034,2000/04/23 21:00,Lorem ipsum,Lorem ipsum,Lorem ipsum,"EUR 0.00",project-01,client-01
 contract-35,ABC-035,2000/04/23 21:00,Lorem ipsum,Lorem ipsum,Lorem ipsum,"EUR 0.01",project-01,client-01
+contract-36,ABC-036,2000/04/23 21:00,Lorem ipsum,Lorem ipsum,Lorem ipsum,"USD 2,000.00",project-01,client-01
+contract-37,ABC-037,2000/04/23 21:00,Lorem ipsum,Lorem ipsum,Lorem ipsum,"GBP 3,000.00",project-01,client-01
+contract-38,ABC-038,2000/04/23 21:00,Lorem ipsum,Lorem ipsum,Lorem ipsum,"THB 123,456.78",project-01,client-01
