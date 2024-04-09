@@ -10,6 +10,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
@@ -56,6 +57,7 @@ public class Invoice extends AbstractEntity {
 	private Money				quantity;
 
 	@Range(min = 0, max = 100)
+	@Digits(integer = 3, fraction = 2)
 	private double				tax;
 
 	@URL

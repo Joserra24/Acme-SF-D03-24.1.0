@@ -65,6 +65,7 @@ public class Sponsorship extends AbstractEntity {
 	private ProjectType			projectType;
 
 	@Email
+	@Length(max = 255)
 	private String				email;
 
 	@URL
