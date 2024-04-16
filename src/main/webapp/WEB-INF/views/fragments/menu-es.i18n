@@ -25,6 +25,11 @@ master.menu.anonymous.manpalpin-link = 29511597K: Palacios Pineda, Manuel
 master.menu.anonymous.javramnun-link = 49126810Y: Ramírez Núñez, Javier
 master.menu.anonymous.rubpergar-link = 77863706N: Pérez Garrido, Rubén
 
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Autentificado
+master.menu.authenticated.all-risks = Ver riesgos
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
