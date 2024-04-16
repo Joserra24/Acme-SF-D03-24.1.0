@@ -38,7 +38,7 @@ public class Sponsorship extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^[A-Z]{1,3}-\\d{3}$")
+	@Pattern(regexp = "^[A-Z]{1,3}-\\d{3}$", message = "{validation.sponsorship.code}")
 	private String				code;
 
 	@PastOrPresent

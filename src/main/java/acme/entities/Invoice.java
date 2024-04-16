@@ -38,7 +38,7 @@ public class Invoice extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^IN-\\d{4}-\\d{4}$")
+	@Pattern(regexp = "^IN-\\d{4}-\\d{4}$", message = "{validation.invoice.code}")
 	private String				code;
 
 	@PastOrPresent
@@ -68,7 +68,7 @@ public class Invoice extends AbstractEntity {
 
 
 	@Transient
-	private double totalAmount() {
+	public double totalAmount() {
 		double result;
 
 		double amount = this.quantity.getAmount();

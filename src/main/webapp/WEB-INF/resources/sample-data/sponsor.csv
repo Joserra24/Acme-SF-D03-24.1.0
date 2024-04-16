@@ -1,32 +1,32 @@
 key,key:userAccount,name,benefits,web-page,email
-sponsor-01,user-account-sponsor-01,Nombre estandar,Beneficios estandar,https://www.example.com,email@example.com
-sponsor-02,user-account-sponsor-01,N,Beneficios estandar,https://www.example.com,email@example.com
-sponsor-03,user-account-sponsor-01,No,Beneficios estandar,https://www.example.com,email@example.com
-sponsor-04,user-account-sponsor-01,Nombre estandarNombre estandarNombre estandarNombre estandarNombre estandar,Beneficios estandar,https://www.example.com,email@example.com
-sponsor-05,user-account-sponsor-01,Nombre estandarNombre estandarNombre estandarNombre estandarNombre estanda,Beneficios estandar,https://www.example.com,email@example.com
-sponsor-06,user-account-sponsor-01,伊尺诶伊尺诶,Beneficios estandar,https://www.example.com,email@example.com
-sponsor-07,user-account-sponsor-02,Лорем ипсумЛорем ипсум,Beneficios estandar,https://www.example.com,email@example.com
-sponsor-08,user-account-sponsor-01,<h1>HTML code</h1>,Beneficios estandar,https://www.example.com,email@example.com
-sponsor-09,user-account-sponsor-01,"1 = 1",Beneficios estandar,https://www.example.com,email@example.com
-sponsor-10,user-account-sponsor-01,SELECT s FROM Sponsor,Beneficios estandar,https://www.example.com,email@example.com
-sponsor-11,user-account-sponsor-01,Nombre estandar,B,https://www.example.com,email@example.com
-sponsor-12,user-account-sponsor-01,Nombre estandar,Be,https://www.example.com,email@example.com
-sponsor-13,user-account-sponsor-01,Nombre estandar,Beneficios estandarBeneficios estandarBeneficios estandarBeneficios estandarBeneficios estandarBenef,https://www.example.com,email@example.com
-sponsor-14,user-account-sponsor-01,Nombre estandar,Beneficios estandarBeneficios estandarBeneficios estandarBeneficios estandarBeneficios estandarBene,https://www.example.com,email@example.com
-sponsor-15,user-account-sponsor-01,Nombre estandar,伊尺诶伊尺诶,https://www.example.com,email@example.com
-sponsor-16,user-account-sponsor-01,Nombre estandar,Лорем ипсумЛорем ипсум,https://www.example.com,email@example.com
-sponsor-17,user-account-sponsor-01,Nombre estandar,<h1>HTML code</h1>,https://www.example.com,email@example.com
-sponsor-18,user-account-sponsor-01,Nombre estandar,"1 = 1",https://www.example.com,email@example.com
-sponsor-19,user-account-sponsor-01,Nombre estandar,SELECT s FROM Sponsor,https://www.example.com,email@example.com
-sponsor-20,user-account-sponsor-01,Nombre estandar,Beneficios estandar,https://www.abcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmn.com,email@example.com
-sponsor-21,user-account-sponsor-01,Nombre estandar,Beneficios estandar,https://www.abcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklm.com,email@example.com
-sponsor-22,user-account-sponsor-01,Nombre estandar,Beneficios estandar,null,email@example.com
-sponsor-23,user-account-sponsor-01,Nombre estandar,Beneficios estandar,http://www.example.com,email@example.com
-sponsor-24,user-account-sponsor-01,Nombre estandar,Beneficios estandar,ftp://www.example.com,email@example.com
-sponsor-25,user-account-sponsor-01,Nombre estandar,Beneficios estandar,https://伊尺诶伊尺诶.com,email@example.com
-sponsor-26,user-account-sponsor-01,Nombre estandar,Beneficios estandar,https://ЛоремипсумЛоремипсум.com,email@example.com
-sponsor-27,user-account-sponsor-01,Nombre estandar,Beneficios estandar,https://www.example.com,伊尺诶伊尺诶@example.com
-sponsor-28,user-account-sponsor-01,Nombre estandar,Beneficios estandar,https://www.example.com,ЛоремипсумЛорем@example.com
-sponsor-29,user-account-sponsor-01,Nombre estandar,Beneficios estandar,https://www.example.com,email@gmail.com
-sponsor-30,user-account-sponsor-01,Nombre estandar,Beneficios estandar,https://www.example.com,email@hotmail.com
-sponsor-31,user-account-sponsor-01,Nombre estandar,Beneficios estandar,https://www.example.com,null
+sponsor-01,user-account-sponsor-01,Lorem ipsum,Lorem ipsum,https://www.example.com,email@example.com
+sponsor-02,user-account-sponsor-01,N,Lorem ipsum,https://www.example.com,email@example.com
+sponsor-03,user-account-sponsor-01,No,Lorem ipsum,https://www.example.com,email@example.com
+sponsor-04,user-account-sponsor-01,Nombre estandarNombre estandarNombre estandarNombre estandarNombre estandar,Lorem ipsum,https://www.example.com,email@example.com
+sponsor-05,user-account-sponsor-01,Nombre estandarNombre estandarNombre estandarNombre estandarNombre estanda,Lorem ipsum,https://www.example.com,email@example.com
+sponsor-06,user-account-sponsor-01,伊尺诶伊尺诶,Lorem ipsum,https://www.example.com,email@example.com
+sponsor-07,user-account-sponsor-02,<script>alert('Hi')</script>,Lorem ipsum,https://www.example.com,email@example.com
+sponsor-08,user-account-sponsor-01,<h1>HTML code</h1>,Lorem ipsum,https://www.example.com,email@example.com
+sponsor-09,user-account-sponsor-01,'' OR 'A' = 'A',Lorem ipsum,https://www.example.com,email@example.com
+sponsor-10,user-account-sponsor-01,SELECT s FROM Sponsor OR 1=1,Lorem ipsum,https://www.example.com,email@example.com
+sponsor-11,user-account-sponsor-01,Lorem ipsum,B,https://www.example.com,email@example.com
+sponsor-12,user-account-sponsor-01,Lorem ipsum,Be,https://www.example.com,email@example.com
+sponsor-13,user-account-sponsor-01,Lorem ipsum,Beneficios estandarBeneficios estandarBeneficios estandarBeneficios estandarBeneficios estandarBenef,https://www.example.com,email@example.com
+sponsor-14,user-account-sponsor-01,Lorem ipsum,Beneficios estandarBeneficios estandarBeneficios estandarBeneficios estandarBeneficios estandarBene,https://www.example.com,email@example.com
+sponsor-15,user-account-sponsor-01,Lorem ipsum,伊尺诶伊尺诶,https://www.example.com,email@example.com
+sponsor-16,user-account-sponsor-01,Lorem ipsum,<script>alert('Hi')</script>,https://www.example.com,email@example.com
+sponsor-17,user-account-sponsor-01,Lorem ipsum,<h1>HTML code</h1>,https://www.example.com,email@example.com
+sponsor-18,user-account-sponsor-01,Lorem ipsum,'' OR 'A' = 'A',https://www.example.com,email@example.com
+sponsor-19,user-account-sponsor-01,Lorem ipsum,SELECT s FROM Sponsor OR 1=1,https://www.example.com,email@example.com
+sponsor-20,user-account-sponsor-01,Lorem ipsum,Lorem ipsum,https://www.abcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmn.com,email@example.com
+sponsor-21,user-account-sponsor-01,Lorem ipsum,Lorem ipsum,https://www.abcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklm.com,email@example.com
+sponsor-22,user-account-sponsor-01,Lorem ipsum,Lorem ipsum,null,email@example.com
+sponsor-23,user-account-sponsor-01,Lorem ipsum,Lorem ipsum,,email@example.com
+sponsor-24,user-account-sponsor-01,Lorem ipsum,Lorem ipsum,http://www.example.com,email@example.com
+sponsor-25,user-account-sponsor-01,Lorem ipsum,Lorem ipsum,ftp://www.example.com/myProfile,email@example.com
+sponsor-26,user-account-sponsor-01,Lorem ipsum,Lorem ipsum,https://www.example.com?ejemplo=ejemplo&id=4,email@example.com
+sponsor-27,user-account-sponsor-01,Lorem ipsum,Lorem ipsum,https://www.example.com,伊尺诶伊尺诶@example.com
+sponsor-28,user-account-sponsor-01,Lorem ipsum,Lorem ipsum,https://www.example.com,null
+sponsor-29,user-account-sponsor-01,Lorem ipsum,Lorem ipsum,https://www.example.com,
+sponsor-30,user-account-sponsor-01,Lorem ipsum,Lorem ipsum,https://www.example.com,email@hotmail.com
+sponsor-31,user-account-sponsor-01,Lorem ipsum,Lorem ipsum,https://www.example.com,email@gmail.com
