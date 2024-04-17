@@ -28,7 +28,7 @@ master.menu.anonymous.rubpergar-link = 77863706N: Pérez Garrido, Rubén
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Autentificado
-master.menu.authenticated.all-risks = Ver riesgos
+master.menu.authenticated.all-risks = Lista de riesgos
 
 # master.menu.administrator ###################################################
 
