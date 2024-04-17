@@ -10,6 +10,8 @@ administrator.risk.form.label.description = Descripción:
 administrator.risk.form.label.link = Enlace (Opcional):
 
 administrator.risk.form.button.create = Crear
+administrator.risk.form.button.update = Actualizar
+administrator.risk.form.button.delete = Borrar
 
 administrator.risk.list.label.reference = Referencia
 administrator.risk.list.label.identificationDate = Fecha de Identificación

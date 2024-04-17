@@ -39,7 +39,7 @@ public class AdministratorRiskShowService extends AbstractService<Administrator,
 		assert object != null;
 		Dataset dataset;
 		dataset = super.unbind(object, "reference", "identificationDate", "impact", "probability", "description", "link");
-		dataset.put("value", object.value());
+		dataset.put("$value", object.value());
 		super.getResponse().addData(dataset);
 	}
 

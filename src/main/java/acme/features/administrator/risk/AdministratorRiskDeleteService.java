@@ -10,7 +10,7 @@ import acme.client.services.AbstractService;
 import acme.entities.Risk;
 
 @Service
-public class AdministratorRiskCreateService extends AbstractService<Administrator, Risk> {
+public class AdministratorRiskDeleteService extends AbstractService<Administrator, Risk> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -28,7 +28,9 @@ public class AdministratorRiskCreateService extends AbstractService<Administrato
 	@Override
 	public void load() {
 		Risk object;
-		object = new Risk();
+		int id;
+		id = super.getRequest().getData("id", int.class);
+		object = this.repository.findOneRiskById(id);
 		super.getBuffer().addData(object);
 	}
 
@@ -46,7 +48,7 @@ public class AdministratorRiskCreateService extends AbstractService<Administrato
 	@Override
 	public void perform(final Risk object) {
 		assert object != null;
-		this.repository.save(object);
+		this.repository.delete(object);
 	}
 
 	@Override
