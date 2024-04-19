@@ -40,7 +40,7 @@ public class Notice extends AbstractEntity {
 	private String				title;
 
 	@NotBlank
-	@Pattern(regexp = "^[^-]+ - [^,]+, [^,]+$")
+	@Pattern(regexp = "^[^-]+ - [^,]+, [^,]+$", message = "{validation.notice.author}")
 	@Length(max = 75)
 	private String				author;
 

@@ -11,6 +11,7 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.DecimalMax;
 import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
@@ -37,12 +38,13 @@ public class ProgressLog extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^PG-[A-Z]{1,2}-\\d{4}$")
+	@Pattern(regexp = "^PG-[A-Z]{1,2}-\\d{4}$", message = "{validation.progresslog.recordid}")
 	private String				recordId;
 
 	@Positive
 	@DecimalMin(value = "0.0", inclusive = true)
 	@DecimalMax(value = "1.0", inclusive = true)
+	@Digits(integer = 1, fraction = 2)
 	private double				completeness;
 
 	@NotBlank
