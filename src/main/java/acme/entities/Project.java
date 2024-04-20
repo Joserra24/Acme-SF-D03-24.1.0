@@ -29,7 +29,7 @@ public class Project extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^[A-Z]{3}-\\d{4}$")
+	@Pattern(regexp = "^[A-Z]{3}-\\d{4}$", message = "{validation.project.code}")
 	private String				code;
 
 	@NotBlank
@@ -38,7 +38,7 @@ public class Project extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	private String				$abstract;
+	private String				abstractProject;
 
 	private int					cost;
 
