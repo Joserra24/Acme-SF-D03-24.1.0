@@ -16,7 +16,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.Length;
 
@@ -41,7 +40,6 @@ public class ProgressLog extends AbstractEntity {
 	@Pattern(regexp = "^PG-[A-Z]{1,2}-\\d{4}$", message = "{validation.progresslog.recordid}")
 	private String				recordId;
 
-	@Positive
 	@DecimalMin(value = "0.0", inclusive = true)
 	@DecimalMax(value = "1.0", inclusive = true)
 	@Digits(integer = 1, fraction = 2)
