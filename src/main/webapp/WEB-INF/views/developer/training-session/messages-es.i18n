@@ -1,0 +1,36 @@
+
+developer.training-session.list.title = Lista de Training Sessions
+developer.training-session.form.title = Detalles de Training Sessions
+
+developer.training-session.list.label.code = Codigo
+developer.training-session.list.label.start-period = Inicio del periodo
+developer.training-session.list.label.end-period = Final del periodo
+developer.training-session.list.label.location = Ubicacion
+developer.training-session.list.label.instructor = Instructor
+developer.training-session.list.label.email = Email
+developer.training-session.list.label.link = URL
+developer.training-session.list.label.draft-mode = Borrador
+developer.training-session.list.label.training-module = Training Module
+
+
+developer.training-session.list.button.create = Crear
+
+developer.training-session.form.label.code = Codigo
+developer.training-session.form.label.start-period = Inicio del periodo
+developer.training-session.form.label.end-period = Final del periodo
+developer.training-session.form.label.location = Ubicacion
+developer.training-session.form.label.instructor = Instructor
+developer.training-session.form.label.email = Email
+developer.training-session.form.label.link = URL
+developer.training-session.form.label.draft-mode = Borrador
+developer.training-session.form.label.training-module = Training Module
+
+
+developer.training-session.form.button.create = Crear
+developer.training-session.form.button.delete = Eliminar
+developer.training-session.form.button.update = Actualizar
+developer.training-session.form.button.publish = Publicar
+
+developer.training-session.form.error.duplicated = Este codigo ya esta en uso
+developer.training-session.form.error.invalid-creation-moment = Momento de creacion invalido
+developer.training-session.form.error.invalid-update-moment = Momento de actualizacion invalido
