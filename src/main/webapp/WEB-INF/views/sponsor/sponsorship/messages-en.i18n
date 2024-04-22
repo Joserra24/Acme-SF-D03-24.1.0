@@ -1,0 +1,33 @@
+sponsor.sponsorship.list.label.code = Code
+sponsor.sponsorship.list.label.moment = Moment
+sponsor.sponsorship.list.label.durationStart = Duration start
+sponsor.sponsorship.list.label.durationEnd = Duration end
+sponsor.sponsorship.list.label.amount = Amount
+sponsor.sponsorship.list.label.projectType = Project type
+
+sponsor.sponsorship.form.label.code = Code:
+sponsor.sponsorship.form.label.moment = Moment:
+sponsor.sponsorship.form.label.durationStart = Duration start:
+sponsor.sponsorship.form.label.durationEnd = Duration end:
+sponsor.sponsorship.form.label.amount = Amount:
+sponsor.sponsorship.form.label.projectType = Project type:
+sponsor.sponsorship.form.label.email = Email (Optional):
+sponsor.sponsorship.form.label.link = Link (Optional):
+sponsor.sponsorship.form.label.project = Project:
+sponsor.sponsorship.form.label.draftMode = Modo borrador
+
+sponsor.sponsorship.list.title = My sponsorships
+sponsor.sponsorship.form.title = Sponsorship details
+
+sponsor.sponsorship.list.button.create = Create
+sponsor.sponsorship.form.button.create = Create
+sponsor.sponsorship.form.button.invoices = Invoices
+sponsor.sponsorship.form.button.update = Update
+sponsor.sponsorship.form.button.delete = Delete
+sponsor.sponsorship.form.button.publish = Publish
+
+sponsor.sponsorship.form.error.duplicated = This code is already being used
+sponsor.sponsorship.form.error.after-moment = Duration start must be after moment
+sponsor.sponsorship.form.error.too-short = Duration end must be, at least, 30 days after duration start
+sponsor.sponsorship.form.error.negative-amount = Amount must be positive
+sponsor.sponsorship.form.error.invoices-amount = Amount must be equal to the sum of the total amount of the related invoice

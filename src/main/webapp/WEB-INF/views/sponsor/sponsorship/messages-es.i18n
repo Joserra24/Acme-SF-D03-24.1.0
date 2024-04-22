@@ -1,0 +1,33 @@
+sponsor.sponsorship.list.label.code = Código
+sponsor.sponsorship.list.label.moment = Momento
+sponsor.sponsorship.list.label.durationStart = Inicio de la duración
+sponsor.sponsorship.list.label.durationEnd = Fin de la duración
+sponsor.sponsorship.list.label.amount = Cantidad
+sponsor.sponsorship.list.label.projectType = Tipo de proyecto
+
+sponsor.sponsorship.form.label.code = Código:
+sponsor.sponsorship.form.label.moment = Momento:
+sponsor.sponsorship.form.label.durationStart = Inicio de la duración:
+sponsor.sponsorship.form.label.durationEnd = Fin de la duración:
+sponsor.sponsorship.form.label.amount = Cantidad:
+sponsor.sponsorship.form.label.projectType = Tipo de proyecto:
+sponsor.sponsorship.form.label.email = Email (Opcional):
+sponsor.sponsorship.form.label.link = Enlace (Opcional):
+sponsor.sponsorship.form.label.project = Proyecto:
+sponsor.sponsorship.form.label.draftMode = Draft mode
+
+sponsor.sponsorship.list.title = Mis patrocinios
+sponsor.sponsorship.form.title = Detalles del patrocinio
+
+sponsor.sponsorship.list.button.create = Crear
+sponsor.sponsorship.form.button.create = Crear
+sponsor.sponsorship.form.button.invoices = Facturas
+sponsor.sponsorship.form.button.update = Actualizar
+sponsor.sponsorship.form.button.delete = Borrar
+sponsor.sponsorship.form.button.publish = Publicar
+
+sponsor.sponsorship.form.error.duplicated = Este código ya está en uso
+sponsor.sponsorship.form.error.after-moment = El inicio de la duración debe ser posterior al momento
+sponsor.sponsorship.form.error.too-short = El fin de la duración debe ser, mínimo, 30 días posterior al inicio de la duración
+sponsor.sponsorship.form.error.negative-amount = La cantidad debe ser positiva
+sponsor.sponsorship.form.error.invoices-amount = La cantidad debe ser igual a la suma de las cantidades totales de las facturas relacionadas
