@@ -2,12 +2,15 @@
 package acme.features.manager.userStory;
 
 import java.util.Collection;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
+import acme.entities.Project;
+import acme.entities.ProjectUserStory;
 import acme.entities.UserStory;
 import acme.roles.Manager;
 
@@ -29,21 +32,26 @@ public class ManagerUserStoryListMineService extends AbstractService<Manager, Us
 	public void authorise() {
 		boolean status;
 
-		status = super.getRequest().getPrincipal().hasRole(Manager.class);
-
+		int masterId;
+		Project project;
+		masterId = super.getRequest().getData("masterId", int.class);
+		project = this.repository.findOneProjectById(masterId);
+		status = project != null && (!project.isDraftMode() || super.getRequest().getPrincipal().hasRole(project.getManager()));
 		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
-		int managerId;
-		managerId = super.getRequest().getPrincipal().getActiveRoleId();
+		int masterId;
+		masterId = super.getRequest().getData("masterId", int.class);
 
-		Collection<UserStory> objects;
+		Collection<ProjectUserStory> objects;
+		objects = this.repository.findManyProjectUserStoriesByProjectId(masterId);
 
-		objects = this.repository.findManyUserStoryByManagerId(managerId);
+		Collection<UserStory> userStories;
+		userStories = objects.stream().map(ProjectUserStory::getUserStory).collect(Collectors.toList());
 
-		super.getBuffer().addData(objects);
+		super.getBuffer().addData(userStories);
 	}
 
 	@Override

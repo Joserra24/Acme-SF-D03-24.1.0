@@ -9,7 +9,8 @@
 	<acme:input-textbox code="manager.project.form.label.abstract-project" path="abstractProject"/>
 	<acme:input-integer code="manager.project.form.label.cost" path="cost"/>
 	<acme:input-url code="manager.project.form.label.link" path="link"/>
-	<acme:input-checkbox code="manager.project.form.label.draft-mode" path="draftMode"/>
+	<acme:input-checkbox code="manager.project.form.label.draft-mode" path="draftMode" readonly="true"/>
+	<acme:button code="manager.project.form.button.user-stories" action="/manager/user-story/list?masterId=${id}"/>
 	
 		
 		
