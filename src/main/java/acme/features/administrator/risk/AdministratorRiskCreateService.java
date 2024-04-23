@@ -41,6 +41,13 @@ public class AdministratorRiskCreateService extends AbstractService<Administrato
 	@Override
 	public void validate(final Risk object) {
 		assert object != null;
+
+		if (!super.getBuffer().getErrors().hasErrors("reference")) {
+			Risk existing;
+			existing = this.repository.findOneRiskByReference(object.getReference());
+			if (existing == null || existing.getId() != object.getId())
+				super.state(existing == null, "reference", "administrator.risk.form.error.duplicated");
+		}
 	}
 
 	@Override

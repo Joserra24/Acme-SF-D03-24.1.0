@@ -29,5 +29,6 @@ sponsor.sponsorship.form.button.publish = Publish
 sponsor.sponsorship.form.error.duplicated = This code is already being used
 sponsor.sponsorship.form.error.after-moment = Duration start must be after moment
 sponsor.sponsorship.form.error.too-short = Duration end must be, at least, 30 days after duration start
+sponsor.sponrsorship.form.error.invoices-not-published = There are related invoices unpublished
 sponsor.sponsorship.form.error.negative-amount = Amount must be positive
 sponsor.sponsorship.form.error.invoices-amount = Amount must be equal to the sum of the total amount of the related invoice

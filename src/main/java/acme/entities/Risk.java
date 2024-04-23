@@ -66,7 +66,7 @@ public class Risk extends AbstractEntity {
 	public double value() {
 		double result;
 
-		result = this.impact * (this.probability / 100.0);
+		result = this.impact * this.probability / 100.0;
 
 		return result;
 	}

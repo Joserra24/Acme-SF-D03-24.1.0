@@ -96,16 +96,20 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 
 		Collection<Invoice> invoices = this.repository.findManyInvoicesBySponsorshipId(object.getId());
 		double sumTotal = 0.0;
+		boolean invoicesPublished = true;
 		String currency = object.getAmount().getCurrency();
-		for (Invoice i : invoices)
+		for (Invoice i : invoices) {
+			invoicesPublished = invoicesPublished && !i.isDraftMode();
 			if (i.getQuantity().getCurrency().equals(currency))
 				sumTotal += i.totalAmount();
-			else
-				sumTotal += i.totalAmount();
+		}
 
 		// Trunco sumTotal a 2 decimales
 		double factor = Math.pow(10, 2);
 		sumTotal = Math.round(sumTotal * factor) / factor;
+
+		if (!super.getBuffer().getErrors().hasErrors("project"))
+			super.state(invoicesPublished, "project", "sponsor.sponrsorship.form.error.invoices-not-published");
 
 		if (!super.getBuffer().getErrors().hasErrors("amount")) {
 			super.state(object.getAmount().getAmount() > 0, "amount", "sponsor.sponsorship.form.error.negative-amount");

@@ -29,5 +29,6 @@ sponsor.sponsorship.form.button.publish = Publicar
 sponsor.sponsorship.form.error.duplicated = Este código ya está en uso
 sponsor.sponsorship.form.error.after-moment = El inicio de la duración debe ser posterior al momento
 sponsor.sponsorship.form.error.too-short = El fin de la duración debe ser, mínimo, 30 días posterior al inicio de la duración
+sponsor.sponrsorship.form.error.invoices-not-published = Hay facturas asociadas sin publicar
 sponsor.sponsorship.form.error.negative-amount = La cantidad debe ser positiva
 sponsor.sponsorship.form.error.invoices-amount = La cantidad debe ser igual a la suma de las cantidades totales de las facturas relacionadas
