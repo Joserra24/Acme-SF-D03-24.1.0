@@ -10,10 +10,12 @@
 	<acme:input-select code="developer.training-module.form.label.difficulty-level" path="difficultyLevel" choices="${difficultyLevel}"/>
 	<acme:input-moment code="developer.training-module.form.label.update-moment" path="updateMoment" readonly="true"/>
 	<acme:input-url code="developer.training-module.form.label.link" path="link"/>
-	<acme:input-select code="developer.training-module.form.label.project" path="project" choices="${projects}"/>	
+	<acme:input-select code="developer.training-module.form.label.project" path="project" choices="${projects}"/>
+	<acme:input-checkbox code="developer.training-module.form.label.draft-mode" path="draftMode" readonly="true" />	
+	<acme:button code="developer.training-module.form.button.training-sessions" action="/developer/training-session/list?masterId=${id}"/>	
 	
 		
-	<jstl:choose>	 
+	<jstl:choose>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
 			<acme:submit code="developer.training-module.form.button.update" action="/developer/training-module/update"/>
 			<acme:submit code="developer.training-module.form.button.delete" action="/developer/training-module/delete"/>

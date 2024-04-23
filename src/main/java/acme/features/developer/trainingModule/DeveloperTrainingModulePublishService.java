@@ -11,6 +11,7 @@ import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
 import acme.entities.Project;
 import acme.entities.TrainingModule;
+import acme.entities.TrainingSession;
 import acme.enumerated.DifficultyLevel;
 import acme.roles.Developer;
 
@@ -57,6 +58,14 @@ public class DeveloperTrainingModulePublishService extends AbstractService<Devel
 	@Override
 	public void validate(final TrainingModule object) {
 		assert object != null;
+		boolean draftModeTrainingSession;
+
+		final Collection<TrainingSession> trainingSessions = this.repository.findManyTrainingSessionsByTrainingModuleId(object.getId());
+		super.state(!trainingSessions.isEmpty(), "*", "developer.training-module.form.error.trainingModuleWithOutTrainingSessions");
+		if (!trainingSessions.isEmpty()) {
+			draftModeTrainingSession = trainingSessions.stream().anyMatch(x -> !x.isDraftMode());
+			super.state(draftModeTrainingSession, "*", "developer.training-module.form.error.trainingSessionInDraftMode");
+		}
 	}
 
 	@Override
@@ -85,7 +94,6 @@ public class DeveloperTrainingModulePublishService extends AbstractService<Devel
 		dataset.put("difficultyLevel", choicesLevel);
 		dataset.put("project", choices.getSelected().getKey());
 		dataset.put("projects", choices);
-
 		super.getResponse().addData(dataset);
 	}
 }
