@@ -25,10 +25,12 @@ public class ManagerUserStoryShowService extends AbstractService<Manager, UserSt
 		boolean status;
 		int userStoryId;
 		UserStory object;
+		Manager manager;
 
 		userStoryId = super.getRequest().getData("id", int.class);
 		object = this.repository.findOneUserStoryById(userStoryId);
-		status = super.getRequest().getPrincipal().hasRole(object.getManager()) || object != null && !object.isDraftMode();
+		manager = object == null ? null : object.getManager();
+		status = super.getRequest().getPrincipal().hasRole(manager) && object != null;
 
 		super.getResponse().setAuthorised(status);
 	}

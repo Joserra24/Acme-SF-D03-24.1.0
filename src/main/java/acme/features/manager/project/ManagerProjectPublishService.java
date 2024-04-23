@@ -1,12 +1,17 @@
 
 package acme.features.manager.project;
 
+import java.util.Collection;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.entities.Project;
+import acme.entities.ProjectUserStory;
+import acme.entities.UserStory;
 import acme.roles.Manager;
 
 @Service
@@ -54,6 +59,16 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 	@Override
 	public void validate(final Project object) {
 		assert object != null;
+
+		boolean draftModeProjectUserStories;
+
+		final Collection<ProjectUserStory> projectUserStories = this.repository.findManyProjectUserStoriesByProjectId(object.getId());
+		Collection<UserStory> userStories = projectUserStories.stream().map(ProjectUserStory::getUserStory).collect(Collectors.toList());
+		super.state(!userStories.isEmpty(), "*", "manager.project.form.error.projectWithOutUserStories");
+		if (!userStories.isEmpty()) {
+			draftModeProjectUserStories = userStories.stream().anyMatch(userStory -> !userStory.isDraftMode());
+			super.state(draftModeProjectUserStories, "*", "manager.project.form.error.userStoriesInDraftMode");
+		}
 	}
 
 	@Override
