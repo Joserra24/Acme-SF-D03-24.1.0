@@ -56,6 +56,8 @@ master.menu.developer.training-sessions = Listado de mis Training Sessions
 master.menu.manager = Manager
 master.menu.manager.projects = Listado de mis Proyectos
 master.menu.manager.user-stories = Listado de mis User Stories
+master.menu.manager.show-manager-dashboard = Mis estadisticas
+
 
 
 # master.menu.user-account ####################################################
