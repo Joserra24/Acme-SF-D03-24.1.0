@@ -40,6 +40,8 @@ public class DeveloperTrainingModuleCreateService extends AbstractService<Develo
 		object = new TrainingModule();
 		object.setDeveloper(developer);
 		object.setDraftMode(true);
+		object.setCreationMoment(MomentHelper.getCurrentMoment());
+		object.setUpdateMoment(MomentHelper.getCurrentMoment());
 
 		super.getBuffer().addData(object);
 	}
@@ -48,7 +50,7 @@ public class DeveloperTrainingModuleCreateService extends AbstractService<Develo
 	public void bind(final TrainingModule object) {
 		assert object != null;
 
-		super.bind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "draftMode", "project");
+		super.bind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "project");
 
 	}
 
@@ -64,7 +66,7 @@ public class DeveloperTrainingModuleCreateService extends AbstractService<Develo
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("updateMoment") && object.getUpdateMoment() != null)
-			super.state(MomentHelper.isAfter(object.getUpdateMoment(), object.getCreationMoment()), "updateMoment", "developer.training-module.form.error.invalidUpdateMoment");
+			super.state(MomentHelper.isAfterOrEqual(object.getUpdateMoment(), object.getCreationMoment()), "updateMoment", "developer.training-module.form.error.invalidUpdateMoment");
 
 	}
 
@@ -88,7 +90,7 @@ public class DeveloperTrainingModuleCreateService extends AbstractService<Develo
 		choicesLevel = SelectChoices.from(DifficultyLevel.class, object.getDifficultyLevel());
 		choices = SelectChoices.from(projects, "code", object.getProject());
 
-		dataset = super.unbind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "draftMode", "project");
+		dataset = super.unbind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "project");
 		dataset.put("difficultyLevel", choicesLevel);
 		dataset.put("project", choices.getSelected().getKey());
 		dataset.put("projects", choices);

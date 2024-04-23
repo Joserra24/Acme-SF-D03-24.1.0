@@ -35,3 +35,4 @@ developer.training-module.form.button.publish = Publish
 developer.training-module.form.error.duplicated = This code is already used
 developer.training-module.form.error.invalid-creation-moment = Invalid creation moment
 developer.training-module.form.error.invalid-update-moment = Invalid update moment
+developer.training-module.form.error.code =  This code is already used

@@ -66,6 +66,7 @@ public class DeveloperTrainingModuleShowService extends AbstractService<Develope
 		dataset.put("difficultyLevel", choicesLevel);
 		dataset.put("project", choices.getSelected().getKey());
 		dataset.put("projects", choices);
+		dataset.put("creationMoment", object.getCreationMoment());
 
 		final int estimatedTotalTime = this.repository.findEstimatedTotalTimeOfTrainingModule(object.getId());
 		dataset.put("estimatedTotalTime", estimatedTotalTime);
