@@ -1,5 +1,6 @@
 key,key:userAccount,identification,companyName,type,email,link
-client-01,user-account-client-01,CLI-0001,Lorem ipsum,COMPANY,correo@ejemplo.com,https://www.ejemplo.com
+client-01,user-account-client-01,CLI-0001,Lorem ipsum,COMPANY,correo1@ejemplo.com,https://www.ejemplo.com
+client-02,user-account-client-02,CLI-2222,Lorem ipsum,INDIVIDUAL,correo2@ejemplo.com,https://www.ejemplo.com
 client-02.1,user-account-client-02,CLI-1234,Lorem ipsum,COMPANY,correo@ejemplo.com,https://www.ejemplo.com
 client-02.2,user-account-client-02,CLI-9999,Lorem ipsum,COMPANY,correo@ejemplo.com,https://www.ejemplo.com
 client-03.1,user-account-client-01,CLI-0002,L,COMPANY,correo@ejemplo.com,https://www.ejemplo.com
@@ -10,7 +11,7 @@ client-03.5,user-account-client-01,CLI-0006,æ¨£æœ¬æ¨™é¡Œ,COMPANY,co
 client-03.6,user-account-client-01,CLI-0007,貸んい建濯よ芝弾テソ,COMPANY,correo@ejemplo.com,https://www.ejemplo.com
 client-03.7,user-account-client-01,CLI-0008,<script>alert('Hi')</script>,COMPANY,correo@ejemplo.com,https://www.ejemplo.com
 client-03.8,user-account-client-01,CLI-0009,<h1>HTML code</h1>,COMPANY,correo@ejemplo.com,https://www.ejemplo.com
-client-03.9,user-account-client-01,CLI-0010,'' or 'A' = 'A,COMPANY,correo@ejemplo.com,https://www.ejemplo.com
+client-03.9,user-account-client-01,CLI-0010,' or 'A' = 'A,COMPANY,correo@ejemplo.com,https://www.ejemplo.com
 client-03.10,user-account-client-01,CLI-0011,SELECT c FROM Client OR 1=1,COMPANY,correo@ejemplo.com,https://www.ejemplo.com
 client-04.1,user-account-client-02,CLI-0012,Lorem ipsum,INDIVIDUAL,correo@ejemplo.com,https://www.ejemplo.com
 client-05.1,user-account-client-01,CLI-0013,Lorem ipsum,COMPANY,c@e.c,https://www.ejemplo.com

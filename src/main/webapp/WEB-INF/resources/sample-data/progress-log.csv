@@ -14,7 +14,7 @@ progresslog-04.5,PG-AB-0010,0.50,æ¨£æœ¬æ¨™é¡Œ,2000/04/23 21:00,Lore
 progresslog-04.6,PG-AB-0011,0.50,貸んい建濯よ芝弾テソ,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
 progresslog-04.7,PG-AB-0012,0.50,<script>alert('Hi')</script>,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
 progresslog-04.8,PG-AB-0013,0.50,<h1>HTML code</h1>,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
-progresslog-04.9,PG-AB-0014,0.50,'' or 'A' = 'A',2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-04.9,PG-AB-0014,0.50,' or 'A' = 'A',2000/04/23 21:00,Lorem ipsum,contract-01,client-01
 progresslog-04.10,PG-AB-0015,0.50,SELECT p FROM ProgressLog OR 1=1,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
 progresslog-05.1,PG-AB-0016,0.50,Lorem ipsum,2000/01/01 00:00,Lorem ipsum,contract-01,client-01
 progresslog-05.2,PG-AB-0017,0.50,Lorem ipsum,2000/01/01 00:01,Lorem ipsum,contract-01,client-01
@@ -29,5 +29,5 @@ progresslog-06.5,PG-AB-0025,0.50,Lorem ipsum,2000/04/23 21:00,æ¨£æœ¬æ¨�
 progresslog-06.6,PG-AB-0026,0.50,Lorem ipsum,2000/04/23 21:00,貸んい建濯よ芝弾テソ,contract-01,client-01
 progresslog-06.7,PG-AB-0027,0.50,Lorem ipsum,2000/04/23 21:00,<script>alert('Hi')</script>,contract-01,client-01
 progresslog-06.8,PG-AB-0028,0.50,Lorem ipsum,2000/04/23 21:00,<h1>HTML code</h1>,contract-01,client-01
-progresslog-06.9,PG-AB-0029,0.50,Lorem ipsum,2000/04/23 21:00,'' or 'A' = 'A',contract-01,client-01
+progresslog-06.9,PG-AB-0029,0.50,Lorem ipsum,2000/04/23 21:00,' or 'A' = 'A',contract-01,client-01
 progresslog-06.10,PG-AB-0030,0.50,Lorem ipsum,2000/04/23 21:00,SELECT p FROM ProgressLog OR 1=1,contract-01,client-01
