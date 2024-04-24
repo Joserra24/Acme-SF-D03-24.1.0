@@ -58,6 +58,7 @@ master.menu.manager.show-manager-dashboard = Dashboard
 master.menu.developer = Developer
 master.menu.developer.training-modules = List my Training Modules
 master.menu.developer.training-sessions = List my Training Sessions
+master.menu.developer.show-developer-dashboard = Dashboard
 
 
 # master.menu.user-account ####################################################

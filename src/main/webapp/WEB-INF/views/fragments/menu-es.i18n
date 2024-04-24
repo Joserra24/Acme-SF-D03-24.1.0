@@ -49,6 +49,8 @@ master.menu.consumer.favourite-link = Enlace favorito
 master.menu.developer = Developer
 master.menu.developer.training-modules = Listado de mis Training Modules
 master.menu.developer.training-sessions = Listado de mis Training Sessions
+master.menu.developer.show-developer-dashboard = Mis estadisticas
+
 
 
 # master.menu.manager ####################################################
