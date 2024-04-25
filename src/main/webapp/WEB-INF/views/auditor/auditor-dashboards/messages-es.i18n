@@ -1,0 +1,5 @@
+auditor.auditor-dashboards.form.title = Panel de Datos de Auditor
+auditor.dashboard.form.title.general-indicators = Indicadores Generales
+
+auditor.dashboard.form.label.total-code-audits-static = Total de Code Audits Estaticos
+auditor.dashboard.form.label.total-code-audits-dynamic = Total de Code Audits Dinamicos

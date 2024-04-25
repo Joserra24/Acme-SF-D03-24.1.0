@@ -18,6 +18,7 @@ import org.hibernate.validator.constraints.URL;
 import acme.client.data.AbstractEntity;
 import acme.enumerated.Mark;
 import acme.enumerated.Type;
+import acme.roles.Auditor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -34,7 +35,7 @@ public class CodeAudit extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^[A-Z]{1,3}-\\d{3}$")
+	@Pattern(regexp = "^[A-Z]{1,3}-\\d{3}$", message = "{validation.codeAudit.code}")
 	private String				code;
 
 	@NotNull
@@ -52,6 +53,8 @@ public class CodeAudit extends AbstractEntity {
 	@Length(max = 255)
 	private String				optionalLink;
 
+	private boolean				draftMode;
+
 	// Derived attributes -----------------------------------------------------
 
 	private Mark				mark;
@@ -62,5 +65,10 @@ public class CodeAudit extends AbstractEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Project				project;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Auditor				auditor;
 
 }

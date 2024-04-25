@@ -1,0 +1,5 @@
+auditor.auditor-dashboards.form.title = Auditor Dashboards
+auditor.dashboard.form.title.general-indicators = General Indicators
+
+auditor.dashboard.form.label.total-code-audits-static = Total Code Audits Static
+auditor.dashboard.form.label.total-code-audits-dynamic = Total Code Audits Dynamic

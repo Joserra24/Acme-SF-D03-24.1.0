@@ -44,6 +44,13 @@ master.menu.provider.favourite-link = Enlace favorito
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
 
+# master.menu.auditor ####################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.code-audits = Listado de mis Code Audits
+master.menu.auditor.audit-records = Listado de mis Audit Records
+master.menu.auditor.show-auditor-dashboard = Estadisticas Auditor
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta

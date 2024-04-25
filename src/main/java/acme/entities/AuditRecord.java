@@ -35,7 +35,7 @@ public class AuditRecord extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^AU-\\d{4}-\\d{3}$")
+	@Pattern(regexp = "^AU-\\d{4}-\\d{3}$", message = "{validation.auditRecord.code}")
 	private String				code;
 
 	@PastOrPresent
@@ -54,6 +54,8 @@ public class AuditRecord extends AbstractEntity {
 	@URL
 	@Length(max = 255)
 	private String				optionalLink;
+
+	private boolean				draftMode;
 
 	// Derived attributes -----------------------------------------------------
 

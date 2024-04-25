@@ -1,0 +1,36 @@
+auditor.code-audit.list.title = Lista de Code Audit
+auditor.code-audit.form.title = Detalles de Code Audit
+
+auditor.code-audit.list.label.code = Codigo
+auditor.code-audit.list.label.execution = Iniciacion
+auditor.code-audit.list.label.type = Tipo
+auditor.code-audit.list.label.corrective-actions = Acciones Correctivas
+auditor.code-audit.list.label.mark = Nota
+auditor.code-audit.list.label.optional-link = URL
+auditor.code-audit.list.label.project = Proyecto
+auditor.code-audit.list.label.draft-mode = Borrador
+
+auditor.code-audit.list.button.create = Crear
+
+auditor.code-audit.form.label.code = Codigo
+auditor.code-audit.form.label.execution = Iniciacion
+auditor.code-audit.form.label.type = Tiyo
+auditor.code-audit.form.label.corrective-actions = Acciones Correctivas
+auditor.code-audit.form.label.optional-link = URL
+auditor.code-audit.form.label.project = Proyecto
+auditor.code-audit.form.label.draft-mode = Borrador
+
+auditor.code-audit.form.button.audit-records = Audit Records
+
+
+auditor.code-audit.form.button.create = Crear
+auditor.code-audit.form.button.delete = Borrar
+auditor.code-audit.form.button.update = Actualizar
+auditor.code-audit.form.button.publish = Publicar
+
+
+
+auditor.code-audit.form.error.duplicated = Este codigo ya esta en uso
+auditor.code-audit.form.error.markNotAtLeastC = No se puede publicar el Code Audit porque la Nota debe ser al menos, "C"
+auditor.code-audit.form.error.auditRecordInDraftMode = Audit Record esta en Borrador
+auditor.code-audit.form.error.code = Este codigo ya esta en uso
