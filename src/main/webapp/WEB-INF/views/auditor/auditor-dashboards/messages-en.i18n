@@ -3,3 +3,11 @@ auditor.dashboard.form.title.general-indicators = General Indicators
 
 auditor.dashboard.form.label.total-code-audits-static = Total Code Audits Static
 auditor.dashboard.form.label.total-code-audits-dynamic = Total Code Audits Dynamic
+auditor.dashboard.form.label.avg-number-audit-records-per-audits = Average Audit Records per Code Audits
+auditor.dashboard.form.label.dev-number-audit-records-per-audits = Deviation Audit Records per Code Audits
+auditor.dashboard.form.label.min-number-audit-records-per-audits = Minimum number Audit Records per Code Audits
+auditor.dashboard.form.label.max-number-audit-records-per-audits = Maximum number Audit Records per Code Audits
+auditor.dashboard.form.label.avg-period-per-audit-record = Average Period per Audit Records
+auditor.dashboard.form.label.dev-period-per-audit-record = Deviation Period per Audit Records
+auditor.dashboard.form.label.min-period-per-audit-record = Minimum Period per Audit Records
+auditor.dashboard.form.label.max-period-per-audit-record = Maximum Period per Audit Records

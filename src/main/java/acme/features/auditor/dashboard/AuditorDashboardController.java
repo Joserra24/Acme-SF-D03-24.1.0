@@ -13,6 +13,8 @@ import acme.roles.Auditor;
 @Controller
 public class AuditorDashboardController extends AbstractController<Auditor, AuditorDashboards> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	private AuditorDashboardShowService showService;
 

@@ -13,8 +13,12 @@ import acme.roles.Auditor;
 @Service
 public class AuditorDashboardShowService extends AbstractService<Auditor, AuditorDashboards> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
 	private AuditorDashboardRepository repository;
+
+	// AbstractService interface ----------------------------------------------
 
 
 	@Override
@@ -51,39 +55,27 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 		totalCodeAuditsStatic = this.repository.totalCodeAuditsType(Type.STATIC, id);
 		totalCodeAuditsDynamic = this.repository.totalCodeAuditsType(Type.DYNAMIC, id);
 
-		/*
-		 * totalMustUserStory = this.repository.totalUserStoriesWithPriority(Priority.MUST, id);
-		 * totalShouldUserStory = this.repository.totalUserStoriesWithPriority(Priority.SHOULD, id);
-		 * totalCouldUserStory = this.repository.totalUserStoriesWithPriority(Priority.COULD, id);
-		 * totalWontUserStory = this.repository.totalUserStoriesWithPriority(Priority.WONT, id);
-		 * 
-		 * avgEstimatedCostUserStory = this.repository.avgEstimatedCostUserStory(id);
-		 * devEstimatedCostUserStory = this.repository.devEstimatedCostUserStory(id);
-		 * minEstimatedCostUserStory = this.repository.minEstimatedCostUserStory(id);
-		 * maxEstimatedCostUserStory = this.repository.maxEstimatedCostUserStory(id);
-		 * 
-		 * avgCostProject = this.repository.avgCostProject(id);
-		 * devCostProject = this.repository.devCostProject(id);
-		 * minCostProject = this.repository.minCostProject(id);
-		 * maxCostProject = this.repository.maxCostProject(id);
-		 */
+		avgAuditRecords = this.repository.avgNumberOfAuditRecordsPerAudits(id);
+		//devAuditRecords = this.repository.devNumberOfAuditRecordsPerAudits(id);
+		minAuditRecords = this.repository.minNumberOfAuditRecordsPerAudits(id);
+		maxAuditRecords = this.repository.maxNumberOfAuditRecordsPerAudits(id);
+
+		avgPeriod = this.repository.avgPeriodOfAuditRecords(id);
+		devPeriod = this.repository.devPeriodOfAuditRecords(id);
+		minPeriod = this.repository.minPeriodOfAuditRecords(id);
+		maxPeriod = this.repository.maxPeriodOfAuditRecords(id);
 
 		dashboard = new AuditorDashboards();
 		dashboard.setTotalCodeAuditsStatic(totalCodeAuditsStatic);
 		dashboard.setTotalCodeAuditsDynamic(totalCodeAuditsDynamic);
-		/*
-		 * dashboard.setTotalShouldUserStory(totalShouldUserStory);
-		 * dashboard.setTotalCouldUserStory(totalCouldUserStory);
-		 * dashboard.setTotalWontUserStory(totalWontUserStory);
-		 * dashboard.setAvgEstimatedCostUserStory(avgEstimatedCostUserStory);
-		 * dashboard.setDevEstimatedCostUserStory(devEstimatedCostUserStory);
-		 * dashboard.setMinEstimatedCostUserStory(minEstimatedCostUserStory);
-		 * dashboard.setMaxEstimatedCostUserStory(maxEstimatedCostUserStory);
-		 * dashboard.setAvgCostProject(avgCostProject);
-		 * dashboard.setDevCostProject(devCostProject);
-		 * dashboard.setMinCostProject(minCostProject);
-		 * dashboard.setMaxCostProject(maxCostProject);
-		 */
+		dashboard.setAvgAuditRecords(avgAuditRecords);
+		//dashboard.setDevAuditRecords(devAuditRecords);
+		dashboard.setMinAuditRecords(minAuditRecords);
+		dashboard.setMaxAuditRecords(maxAuditRecords);
+		dashboard.setAvgPeriod(avgPeriod);
+		dashboard.setDevPeriod(devPeriod);
+		dashboard.setMinPeriod(minPeriod);
+		dashboard.setMaxPeriod(maxPeriod);
 
 		super.getBuffer().addData(dashboard);
 	}
@@ -92,16 +84,8 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 	public void unbind(final AuditorDashboards object) {
 		Dataset dataset;
 
-		dataset = super.unbind(object, "totalCodeAuditsStatic", "totalCodeAuditsDynamic");
-		/*
-		 * dataset = super.unbind(object, //
-		 * "totalMustUserStory", "totalShouldUserStory", //
-		 * "totalCouldUserStory", "totalWontUserStory", //
-		 * "avgEstimatedCostUserStory", "devEstimatedCostUserStory", //
-		 * "minEstimatedCostUserStory", "maxEstimatedCostUserStory", //
-		 * "avgCostProject", "devCostProject", //
-		 * "minCostProject", "maxCostProject");
-		 */
+		dataset = super.unbind(object, "totalCodeAuditsStatic", "totalCodeAuditsDynamic", "avgAuditRecords", //
+			"minAuditRecords", "maxAuditRecords", "avgPeriod", "devPeriod", "minPeriod", "maxPeriod");
 
 		super.getResponse().addData(dataset);
 	}

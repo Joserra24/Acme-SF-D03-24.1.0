@@ -11,39 +11,34 @@ import acme.roles.Auditor;
 @Repository
 public interface AuditorDashboardRepository extends AbstractRepository {
 
-	@Query("select a from Auditor a where a.userAccount.id = :id")
+	@Query("select a from Auditor a where a.id = :id")
 	Auditor findOneAuditorByUserAccountId(int id);
 
 	@Query("select count(ca) from CodeAudit ca where ca.type = :type AND ca.auditor.id = :id ")
 	int totalCodeAuditsType(Type type, int id);
 
-	/*
-	 * @Query("select avg(select count(ar) from AuditingRecord ar where ar.audit.id = a.id) from Audit a where a.auditor.id = :id")
-	 * double averageNumberOfAuditingRecordsPerAudit(int id);
-	 * 
-	 * @Query("select min(select count(ar) from AuditingRecord ar where ar.audit.id = a.id) from Audit a where a.auditor.id = :id")
-	 * double minimumOfAuditingRecordsPerAudit(int id);
-	 * 
-	 * @Query("select max(select count(ar) from AuditingRecord ar where ar.audit.id = a.id) from Audit a where a.auditor.id = :id")
-	 * double maximumOfAuditingRecordsPerAudit(int id);
-	 * 
-	 * //@Query("select a from Audit a where a.auditor.id = :id")
-	 * //Collection<Audit> findManyAuditsByAuditor(int id);
-	 * 
-	 * @Query("select avg((((EXTRACT(YEAR FROM ar.endPeriod)-EXTRACT(YEAR FROM ar.startPeriod))*365)*24)+(((EXTRACT(MONTH FROM ar.endPeriod)-EXTRACT(MONTH FROM ar.startPeriod))*30)*24)+((EXTRACT(DAY FROM ar.endPeriod)-EXTRACT(DAY FROM ar.startPeriod))*24)+(EXTRACT(HOUR FROM ar.endPeriod)-EXTRACT(HOUR FROM ar.startPeriod))) from AuditingRecord ar where ar.audit.auditor.id = :id"
-	 * )
-	 * double averageDurationOfAuditingRecordsPerAudit(int id);
-	 * 
-	 * @Query("select max((((EXTRACT(YEAR FROM ar.endPeriod)-EXTRACT(YEAR FROM ar.startPeriod))*365)*24)+(((EXTRACT(MONTH FROM ar.endPeriod)-EXTRACT(MONTH FROM ar.startPeriod))*30)*24)+((EXTRACT(DAY FROM ar.endPeriod)-EXTRACT(DAY FROM ar.startPeriod))*24)+(EXTRACT(HOUR FROM ar.endPeriod)-EXTRACT(HOUR FROM ar.startPeriod))) from AuditingRecord ar where ar.audit.auditor.id = :id"
-	 * )
-	 * double maximumDurationOfAuditingRecordsPerAudit(int id);
-	 * 
-	 * @Query("select min((((EXTRACT(YEAR FROM ar.endPeriod)-EXTRACT(YEAR FROM ar.startPeriod))*365)*24)+(((EXTRACT(MONTH FROM ar.endPeriod)-EXTRACT(MONTH FROM ar.startPeriod))*30)*24)+((EXTRACT(DAY FROM ar.endPeriod)-EXTRACT(DAY FROM ar.startPeriod))*24)+(EXTRACT(HOUR FROM ar.endPeriod)-EXTRACT(HOUR FROM ar.startPeriod))) from AuditingRecord ar where ar.audit.auditor.id = :id"
-	 * )
-	 * double minimumDurationOfAuditingRecordsPerAudit(int id);
-	 * 
-	 * @Query("select stddev((((EXTRACT(YEAR FROM ar.endPeriod)-EXTRACT(YEAR FROM ar.startPeriod))*365)*24)+(((EXTRACT(MONTH FROM ar.endPeriod)-EXTRACT(MONTH FROM ar.startPeriod))*30)*24)+((EXTRACT(DAY FROM ar.endPeriod)-EXTRACT(DAY FROM ar.startPeriod))*24)+(EXTRACT(HOUR FROM ar.endPeriod)-EXTRACT(HOUR FROM ar.startPeriod))) from AuditingRecord ar where ar.audit.auditor.id = :id"
-	 * )
-	 * double deviationDurationOfAuditingRecordsPerAudit(int id);
-	 */
+	@Query("select avg(select count(ar) from AuditRecord ar where ar.codeAudit.id = ca.id) from CodeAudit ca where ca.auditor.id = :id")
+	Double avgNumberOfAuditRecordsPerAudits(int id);
+
+	//@Query("select stddev(select count(ar) from AuditRecord ar where ar.codeAudit.id = ca.id) from CodeAudit ca where ca.auditor.id = :id")
+	//Double devNumberOfAuditRecordsPerAudits(int id);
+
+	@Query("select min(select count(ar) from AuditRecord ar where ar.codeAudit.id = ca.id) from CodeAudit ca where ca.auditor.id = :id")
+	Double minNumberOfAuditRecordsPerAudits(int id);
+
+	@Query("select max(select count(ar) from AuditRecord ar where ar.codeAudit.id = ca.id) from CodeAudit ca where ca.auditor.id = :id")
+	Double maxNumberOfAuditRecordsPerAudits(int id);
+
+	@Query("select avg(time_to_sec(timediff(ar.finalPeriod,ar.initialPeriod))/60) from AuditRecord ar where ar.codeAudit.auditor.id = :id")
+	Double avgPeriodOfAuditRecords(int id);
+
+	@Query("select stddev(time_to_sec(timediff(ar.finalPeriod,ar.initialPeriod))/60) from AuditRecord ar where ar.codeAudit.auditor.id = :id")
+	Double devPeriodOfAuditRecords(int id);
+
+	@Query("select min(time_to_sec(timediff(ar.finalPeriod,ar.initialPeriod))/60) from AuditRecord ar where ar.codeAudit.auditor.id = :id")
+	Double minPeriodOfAuditRecords(int id);
+
+	@Query("select max(time_to_sec(timediff(ar.finalPeriod,ar.initialPeriod))/60) from AuditRecord ar where ar.codeAudit.auditor.id = :id")
+	Double maxPeriodOfAuditRecords(int id);
+
 }
