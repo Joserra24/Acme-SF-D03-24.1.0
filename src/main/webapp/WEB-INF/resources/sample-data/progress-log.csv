@@ -1,6 +1,33 @@
-key,recordId,completeness,comment,registrationMoment,responsiblePerson,key:contract
-progresslog-01,PG-AB-0001,0.75,Close ending,2003/03/06 12:00,Persona Responsable 1,contract-01
-progresslog-02,PG-CD-0002,1.0,Tarea completada,2002/03/07 14:30,Responsible Person 2,contract-02
-progresslog-03,PG-EF-0003,0.5,Half way done,2001/03/08 16:45,asdasdasd qwerty,contract-03
-progresslog-04,PG-ZZ-0004,0.00000000000001,Aasdioi af(/&589=d,2003/07/29 09:15,Responsible Person #4,contract-04
-progresslog-05,PG-KK-0005,0.9999,a,1999/03/10 10:30,@#%$#@!^,contract-05
+key,recordId,completeness,comment,registrationMoment,responsiblePerson,key:contract,key:client
+progresslog-01,PG-AB-0001,0.50,Lorem ipsum,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-02.1,PG-Z-0001,0.50,Lorem ipsum,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-02.2,PG-ZZ-0001,0.50,Lorem ipsum,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-03.1,PG-AB-0002,0,Lorem ipsum,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-03.2,PG-AB-0003,0.01,Lorem ipsum,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-03.3,PG-AB-0004,1,Lorem ipsum,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-03.4,PG-AB-0005,0.99,Lorem ipsum,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-04.1,PG-AB-0006,0.50,L,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-04.2,PG-AB-0007,0.50,Lo,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-04.3,PG-AB-0008,0.50,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed euismod elit at est porttitor tristique,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-04.4,PG-AB-0009,0.50,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed euismod elit at est porttitor tristique,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-04.5,PG-AB-0010,0.50,æ¨£æœ¬æ¨™é¡Œ,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-04.6,PG-AB-0011,0.50,貸んい建濯よ芝弾テソ,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-04.7,PG-AB-0012,0.50,<script>alert('Hi')</script>,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-04.8,PG-AB-0013,0.50,<h1>HTML code</h1>,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-04.9,PG-AB-0014,0.50,' or 'A' = 'A',2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-04.10,PG-AB-0015,0.50,SELECT p FROM ProgressLog OR 1=1,2000/04/23 21:00,Lorem ipsum,contract-01,client-01
+progresslog-05.1,PG-AB-0016,0.50,Lorem ipsum,2000/01/01 00:00,Lorem ipsum,contract-01,client-01
+progresslog-05.2,PG-AB-0017,0.50,Lorem ipsum,2000/01/01 00:01,Lorem ipsum,contract-01,client-01
+progresslog-05.3,PG-AB-0018,0.50,Lorem ipsum,2022/07/30 00:00,Lorem ipsum,contract-01,client-01
+progresslog-05.4,PG-AB-0019,0.50,Lorem ipsum,2022/07/29 23:59,Lorem ipsum,contract-01,client-01
+progresslog-05.5,PG-AB-0020,0.50,Lorem ipsum,2016/02/29 12:34,Lorem ipsum,contract-01,client-01
+progresslog-06.1,PG-AB-0021,0.50,Lorem ipsum,2000/04/23 21:00,L,contract-01,client-01
+progresslog-06.2,PG-AB-0022,0.50,Lorem ipsum,2000/04/23 21:00,Lo,contract-01,client-01
+progresslog-06.3,PG-AB-0023,0.50,Lorem ipsum,2000/04/23 21:00,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed euismod elit a,contract-01,client-01
+progresslog-06.4,PG-AB-0024,0.50,Lorem ipsum,2000/04/23 21:00,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed euismod elit at,contract-01,client-01
+progresslog-06.5,PG-AB-0025,0.50,Lorem ipsum,2000/04/23 21:00,æ¨£æœ¬æ¨™é¡Œ,contract-01,client-01
+progresslog-06.6,PG-AB-0026,0.50,Lorem ipsum,2000/04/23 21:00,貸んい建濯よ芝弾テソ,contract-01,client-01
+progresslog-06.7,PG-AB-0027,0.50,Lorem ipsum,2000/04/23 21:00,<script>alert('Hi')</script>,contract-01,client-01
+progresslog-06.8,PG-AB-0028,0.50,Lorem ipsum,2000/04/23 21:00,<h1>HTML code</h1>,contract-01,client-01
+progresslog-06.9,PG-AB-0029,0.50,Lorem ipsum,2000/04/23 21:00,' or 'A' = 'A',contract-01,client-01
+progresslog-06.10,PG-AB-0030,0.50,Lorem ipsum,2000/04/23 21:00,SELECT p FROM ProgressLog OR 1=1,contract-01,client-01
