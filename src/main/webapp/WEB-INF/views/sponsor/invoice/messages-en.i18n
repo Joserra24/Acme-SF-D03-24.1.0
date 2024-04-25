@@ -25,4 +25,5 @@ sponsor.invoice.form.button.publish = Publish
 
 sponsor.invoice.form.error.duplicated = This code is already being used
 sponsor.invoice.form.error.too-short = Due date must be, at least, 30 days after registration time
+sponsor.invoice.form.error.different-currency = The currency must be the same as the related sponsorship
 sponsor.invoice.form.error.negative-amount = Amount must be positive and not nought

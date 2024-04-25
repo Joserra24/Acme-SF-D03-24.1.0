@@ -91,8 +91,11 @@ public class SponsorSponsorshipUpdateService extends AbstractService<Sponsor, Sp
 			}
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("amount"))
+		if (!super.getBuffer().getErrors().hasErrors("amount")) {
+			Sponsorship sponsorship = this.repository.findOneSponsorshipById(object.getId());
+			super.state(object.getAmount().getCurrency().equals(sponsorship.getAmount().getCurrency()), "amount", "sponsor.sponsorship.form.error.different-currency");
 			super.state(object.getAmount().getAmount() > 0, "amount", "sponsor.sponsorship.form.error.negative-amount");
+		}
 	}
 
 	@Override

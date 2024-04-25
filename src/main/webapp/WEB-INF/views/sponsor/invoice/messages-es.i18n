@@ -25,4 +25,5 @@ sponsor.invoice.form.button.publish = Publicar
 
 sponsor.invoice.form.error.duplicated = Este código ya está en uso
 sponsor.invoice.form.error.too-short = La fecha límite debe ser, mínimo, 30 días posterior a la fecha de registro
+sponsor.invoice.form.error.different-currency = La moneda debe ser la misma que la del patrocinio asociado
 sponsor.invoice.form.error.negative-amount = La cantidad debe ser positiva

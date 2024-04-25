@@ -77,8 +77,12 @@ public class SponsorInvoicePublishService extends AbstractService<Sponsor, Invoi
 			}
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("quantity"))
+		if (!super.getBuffer().getErrors().hasErrors("quantity")) {
+			int invoiceId = super.getRequest().getData("id", int.class);
+			Sponsorship sponsorship = this.repository.findOneSponsorshipByInvoiceId(invoiceId);
+			super.state(sponsorship.getAmount().getCurrency().equals(object.getQuantity().getCurrency()), "quantity", "sponsor.invoice.form.error.different-currency");
 			super.state(object.getQuantity().getAmount() > 0, "quantity", "sponsor.invoice.form.error.negative-amount");
+		}
 	}
 
 	@Override
