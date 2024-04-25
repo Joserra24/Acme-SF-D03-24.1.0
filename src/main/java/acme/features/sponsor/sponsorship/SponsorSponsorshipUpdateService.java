@@ -25,8 +25,6 @@ public class SponsorSponsorshipUpdateService extends AbstractService<Sponsor, Sp
 	@Autowired
 	private SponsorSponsorshipRepository repository;
 
-	// AbstractService<Employer, Job> -------------------------------------
-
 
 	@Override
 	public void authorise() {
@@ -59,7 +57,7 @@ public class SponsorSponsorshipUpdateService extends AbstractService<Sponsor, Sp
 		Project project;
 		projectId = super.getRequest().getData("project", int.class);
 		project = this.repository.findOneProjectById(projectId);
-		super.bind(object, "code", "moment", "durationStart", "durationEnd", "amount", "projectType", "email", "link", "draftMode");
+		super.bind(object, "code", "moment", "durationStart", "durationEnd", "amount", "projectType", "email", "link");
 		object.setProject(project);
 	}
 
@@ -116,10 +114,11 @@ public class SponsorSponsorshipUpdateService extends AbstractService<Sponsor, Sp
 		projects = SelectChoices.from(allProjects, "code", object.getProject());
 		choices = SelectChoices.from(ProjectType.class, object.getProjectType());
 
-		dataset = super.unbind(object, "code", "moment", "durationStart", "durationEnd", "amount", "projectType", "email", "link", "draftMode");
+		dataset = super.unbind(object, "code", "moment", "durationStart", "durationEnd", "amount", "projectType", "email", "link");
 		dataset.put("project", projects.getSelected().getKey());
 		dataset.put("projects", projects);
 		dataset.put("types", choices);
+		dataset.put("draftMode", object.isDraftMode());
 
 		super.getResponse().addData(dataset);
 	}

@@ -50,9 +50,9 @@ public class SponsorInvoiceShowService extends AbstractService<Sponsor, Invoice>
 		assert object != null;
 		Dataset dataset;
 
-		dataset = super.unbind(object, "code", "registrationTime", "dueDate", "quantity", "tax", "link", "draftMode");
+		dataset = super.unbind(object, "code", "registrationTime", "dueDate", "quantity", "tax", "link");
 		dataset.put("masterId", object.getSponsorship().getId());
-		//		dataset.put("draftMode", object.getSponsorship().isDraftMode());
+		dataset.put("draftMode", object.isDraftMode());
 		dataset.put("totalAmount", object.totalAmount());
 		dataset.put("sponsorship", object.getSponsorship().getCode());
 

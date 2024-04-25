@@ -12,7 +12,6 @@
 	<acme:input-double code="sponsor.invoice.form.label.totalAmount" path="totalAmount" readonly="true"/>
 	<acme:input-url code="sponsor.invoice.form.label.link" path="link"/>
 	<acme:input-textbox code="sponsor.invoice.form.label.sponsorship" path="sponsorship" readonly="true"/>
-	<acme:input-checkbox code="sponsor.invoice.form.label.draftMode" path="draftMode" readonly="true"/>
 	
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">

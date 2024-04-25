@@ -20,7 +20,7 @@ risk-05.4,R-018,2020/12/11 23:00,23.07,73.29,Descripcion estandarDescripcion est
 risk-05.5,R-019,2020/12/11 23:00,23.07,73.29,伊尺诶娜迪艾艾,https://www.example.com
 risk-05.6,R-020,2020/12/11 23:00,23.07,73.29,<script>alert('Hi')</script>,https://www.example.com
 risk-05.7,R-021,2020/12/11 23:00,23.07,73.29,<h1>HTML code</h1>,https://www.example.com
-risk-05.8,R-022,2020/12/11 23:00,23.07,73.29,'' OR 'A' = 'A',https://www.example.com
+risk-05.8,R-022,2020/12/11 23:00,23.07,73.29,' OR 'A' = 'A',https://www.example.com
 risk-05.9,R-023,2020/12/11 23:00,23.07,73.29,SELECT r FROM Risk OR 1=1;,https://www.example.com
 risk-06.1,R-024,2020/12/11 23:00,23.07,73.29,Lorem ipsum,https://www.abcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmn.com
 risk-06.2,R-025,2020/12/11 23:00,23.07,73.29,Lorem ipsum,https://www.abcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklmopqrstuvwxyzabcdefghijklm.com
