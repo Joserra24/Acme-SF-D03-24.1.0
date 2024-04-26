@@ -12,7 +12,6 @@
 	<acme:input-email code="developer.training-session.form.label.email" path="email"/>	
 	<acme:input-url code="developer.training-session.form.label.link" path="link"/>	
 	<acme:input-select code="developer.training-session.form.label.training-module" path="trainingModule" choices="${trainingModules}"/>
-	<acme:input-checkbox code="developer.training-session.form.label.draft-mode" path="draftMode" readonly="true" />	
 		
 		
 	<jstl:choose>	 
