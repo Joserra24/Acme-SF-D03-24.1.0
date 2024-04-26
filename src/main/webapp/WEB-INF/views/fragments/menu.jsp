@@ -19,21 +19,22 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.list-sponsorship" action="/any/sponsorship/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.josbanbot-link" action="https://www.realbetisbalompie.es/club/estadio-benito-villamarin/"/>
 			<acme:menu-suboption code="master.menu.anonymous.sonrusmor-link" action="https://www.nationalgeographic.es/animales/2021/09/los-pandas-salen-de-la-lista-de-especies-en-peligro-en-china-pero-la-amenaza-continua"/>
 			<acme:menu-suboption code="master.menu.anonymous.manpalpin-link" action="https://youtube.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.javramnun-link" action="https://www.twitch.tv/illojuan"/>
 			<acme:menu-suboption code="master.menu.anonymous.rubpergar-link" action="https://www.hltv.org"/>
-			<acme:menu-separator/>			
-			<acme:menu-suboption code="master.menu.anonymous.claim-list" action="/any/claim/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.training-module-list" action="/any/training-module/list"/>		
+			<acme:menu-separator/>	
+			<acme:menu-suboption code="master.menu.anonymous.list-sponsorship" action="/any/sponsorship/list"/>
+					
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.all-risks" action="/authenticated/risk/list"/>
 			<acme:menu-suboption code="master.menu.autheticated.list-sponsorship" action="/any/sponsorship/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.claim-list" action="/any/claim/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.training-module-list" action="/any/training-module/list"/>		
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
