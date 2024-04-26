@@ -24,6 +24,8 @@ master.menu.anonymous.sonrusmor-link = 77868455T: Rus Morales, Sonia Maria
 master.menu.anonymous.manpalpin-link = 29511597K: Palacios Pineda, Manuel 
 master.menu.anonymous.javramnun-link = 49126810Y: Ramírez Núñez, Javier
 master.menu.anonymous.rubpergar-link = 77863706N: Perez Garrido, Ruben
+master.menu.anonymous.claim-list = Claim list
+master.menu.anonymous.training-module-list = Training Module list
 
 # master.menu.administrator ###################################################
 
@@ -69,3 +71,7 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.developer = Developer data
+master.menu.user-account.become-developer = Become a developer
+master.menu.user-account.manager = Manager data
+master.menu.user-account.become-manager = Become a manager
