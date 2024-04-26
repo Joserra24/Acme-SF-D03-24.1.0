@@ -1,0 +1,41 @@
+
+developer.training-module.list.title = Lista de Training Modules
+developer.training-module.form.title = Detalles del Training Modules
+
+developer.training-module.list.label.code = Codigo
+developer.training-module.list.label.creation-moment = Momento de creacion
+developer.training-module.list.label.details = Detalles
+developer.training-module.list.label.difficulty-level = Nivel de dificultad
+developer.training-module.list.label.update-moment = Momento de actualizacion
+developer.training-module.list.label.link = URL
+developer.training-module.list.label.estimated-total-time = Tiempo total estimado
+developer.training-module.list.label.project = Proyecto
+developer.training-module.list.label.draft-mode = Borrador
+
+
+developer.training-module.list.button.create = Crear
+
+developer.training-module.form.label.code = Codigo
+developer.training-module.form.label.creation-moment = Momento de creacion
+developer.training-module.form.label.details = Detalles
+developer.training-module.form.label.difficulty-level = Nivel de dificultad
+developer.training-module.form.label.update-moment = Momento de actualizacion
+developer.training-module.form.label.link = URL
+developer.training-module.form.label.estimated-total-time = Tiempo total estimado
+developer.training-module.form.label.project = Proyecto
+developer.training-module.form.label.draft-mode = Borrador
+
+developer.training-module.form.button.create = Crear
+developer.training-module.form.button.delete = Eliminar
+developer.training-module.form.button.update = Actualizar
+developer.training-module.form.button.publish = Publicar
+developer.training-module.form.button.training-sessions = Training Sessions
+
+
+
+
+developer.training-module.form.error.duplicated = Este codigo ya esta en uso
+developer.training-module.form.error.invalid-creation-moment = Momento de creacion invalido
+developer.training-module.form.error.invalid-update-moment = Momento de actualizacion invalido
+developer.training-module.form.error.code =  Este codigo ya esta en uso
+developer.training-module.form.error.trainingModuleWithOutTrainingSessions = No podemos publicar el Traninig Module porque no tiene Training Sessions

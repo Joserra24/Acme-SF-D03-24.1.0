@@ -1,0 +1,39 @@
+
+developer.training-session.list.title = Training Session List
+developer.training-session.form.title = Training Session Form
+
+developer.training-session.list.label.code = Code
+developer.training-session.list.label.start-period = Start Period
+developer.training-session.list.label.end-period = End Period
+developer.training-session.list.label.location = Location
+developer.training-session.list.label.instructor = Instructor
+developer.training-session.list.label.email = Email
+developer.training-session.list.label.link = Link
+developer.training-session.list.label.draft-mode = Draft
+developer.training-session.list.label.training-module = Training Module
+
+
+developer.training-session.list.button.create = Create
+
+developer.training-session.form.label.code = Code
+developer.training-session.form.label.start-period = Start Period
+developer.training-session.form.label.end-period = End Period
+developer.training-session.form.label.location = Location
+developer.training-session.form.label.instructor = Instructor
+developer.training-session.form.label.email = Email
+developer.training-session.form.label.link = Link
+developer.training-session.form.label.draft-mode = Draft
+developer.training-session.form.label.training-module = Training Module
+
+
+
+developer.training-session.form.button.create = Create
+developer.training-session.form.button.delete = Delete
+developer.training-session.form.button.update = Update
+developer.training-session.form.button.publish = Publish
+
+
+
+developer.training-session.form.error.duplicated = This code is already used
+developer.training-session.form.error.invalid-creation-moment = Invalid creation moment
+developer.training-session.form.error.invalid-update-moment = Invalid update moment

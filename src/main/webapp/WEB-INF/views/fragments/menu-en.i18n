@@ -25,6 +25,8 @@ master.menu.anonymous.sonrusmor-link = 77868455T: Rus Morales, Sonia Maria
 master.menu.anonymous.manpalpin-link = 29511597K: Palacios Pineda, Manuel 
 master.menu.anonymous.javramnun-link = 49126810Y: Ramírez Núñez, Javier
 master.menu.anonymous.rubpergar-link = 77863706N: Perez Garrido, Ruben
+master.menu.anonymous.claim-list = Claim list
+master.menu.anonymous.training-module-list = Training Module list
 
 # master.menu.authenticated ###################################################
 
@@ -40,7 +42,9 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
+
 master.menu.administrator.list-risks = List risks
+master.menu.administrator.list.banner = Banner List
 
 # master.menu.provider ########################################################
 
@@ -58,6 +62,28 @@ master.menu.sponsor = Sponsor
 master.menu.sponsor.list-mine = My sponsorships
 master.menu.sponsor.dashboard = Dashboard
 
+# master.menu.auditor ####################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.code-audits = List my Code Audits
+master.menu.auditor.audit-records = List my Audit Records
+master.menu.auditor.show-auditor-dashboard = Dashboard Auditor
+
+# master.menu.manager ####################################################
+
+master.menu.manager = Manager
+master.menu.manager.projects = List my Projects
+master.menu.manager.user-stories = List my User Stories
+master.menu.manager.show-manager-dashboard = Dashboard
+
+
+# master.menu.developer ####################################################
+
+master.menu.developer = Developer
+master.menu.developer.training-modules = List my Training Modules
+master.menu.developer.training-sessions = List my Training Sessions
+master.menu.developer.show-developer-dashboard = Dashboard
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
@@ -68,3 +94,8 @@ master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.become-sponsor = Become a sponsor
 master.menu.user-account.sponsor = Sponsor data
+
+master.menu.user-account.developer = Developer data
+master.menu.user-account.become-developer = Become a developer
+master.menu.user-account.manager = Manager data
+master.menu.user-account.become-manager = Become a manager

@@ -1,0 +1,23 @@
+administrator.banner.list.title = Banners List
+administrator.banner.form.title = Banners Form
+
+administrator.banner.list.label.period-start = Period Start
+administrator.banner.list.label.slogan = Slogan
+administrator.banner.list.label.period-finish = Period Finish
+
+administrator.banner.list.button.create = Create
+
+administrator.banner.form.label.instation-update-moment = Instantiation
+administrator.banner.form.label.period-start = Period Start
+administrator.banner.form.label.period-finish = Period Finish
+administrator.banner.form.label.link-picture = Link Picture
+administrator.banner.form.list.label.slogan = Slogan
+administrator.banner.form.list.label.link-document = Link Document
+
+administrator.banner.form.button.update = Update
+administrator.banner.form.button.delete = Delete
+administrator.banner.form.button.create = Create
+
+administrator.banner.form.error.start-before-instation = The start period must be after the instantiation moment
+administrator.banner.form.error.finish-before-start = The finish period must be after the start period
+administrator.banner.form.error.one-week-period = The period must be 1 week, at least

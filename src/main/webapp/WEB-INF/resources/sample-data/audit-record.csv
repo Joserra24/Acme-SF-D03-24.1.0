@@ -1,6 +1,24 @@
-key,code,initial-period,final-period,mark,optional-link,key:code-audit
-audit-record-01,AU-0123-456,2002/06/11 09:30,2002/07/11 10:30,A,https://www.flashscore.es/,code-audit-01
-audit-record-02,AU-7890-321,2002/06/12 10:00,2002/07/12 11:00,B,https://www.sportingnews.com/,code-audit-02
-audit-record-03,AU-4567-890,2002/06/13 11:30,2002/07/13 12:30,C,https://www.espn.com/,code-audit-03
-audit-record-04,AU-1234-567,2002/06/14 12:00,2002/07/14 13:00,F,https://www.bbc.com/,code-audit-04
-audit-record-05,AU-8901-234,2002/06/15 13:30,2002/07/15 14:30,F_MINUS,https://www.cnn.com/,code-audit-05
+key,code,initial-period,final-period,mark,optional-link,draft-mode,key:code-audit
+audit-record-01,AU-0000-001,2000/10/12 00:00,2020/03/26 08:00,A,https://es.wikipedia.org/wiki/Curso,true,code-audit-01
+audit-record-02,AU-0000-002,2000/10/12 00:00,2020/03/26 08:00,A,https://es.wikipedia.org/wiki/Curso,true,code-audit-02
+audit-record-03,AU-0000-003,2000/10/12 00:00,2020/03/26 08:00,A,https://es.wikipedia.org/wiki/Curso,true,code-audit-03
+audit-record-03.1,AU-0000-103,2000/12/12 00:00,2022/07/30 00:00,A,https://es.wikipedia.org/wiki/Curso,true,code-audit-05.1
+audit-record-03.2,AU-0000-203,2000/12/12 00:00,2022/07/29 23:59,A,https://es.wikipedia.org/wiki/Curso,true,code-audit-05.2
+audit-record-03.3,AU-0000-303,2004/02/29 00:00,2020/03/26 08:00,A,https://es.wikipedia.org/wiki/Curso,true,code-audit-05.3
+audit-record-04,AU-0000-004,2000/01/01 00:00,2020/03/26 08:00,F,https://es.wikipedia.org/wiki/Curso,true,code-audit-04
+audit-record-05,AU-0000-005,2000/01/01 00:01,2020/03/26 08:00,A_PLUS,https://es.wikipedia.org/wiki/Curso,true,code-audit-05
+audit-record-06,AU-0000-006,2000/10/12 00:00,2000/12/19 00:00,A,https://es.wikipedia.org/wiki/Curso,true,code-audit-06
+audit-record-07,AU-0000-007,2000/10/12 00:00,2000/12/19 00:01,A,https://es.wikipedia.org/wiki/Curso,true,code-audit-07
+audit-record-08,AU-0000-008,2000/10/12 00:00,2020/03/26 08:00,A,https://es.wikipedia.org/wiki/CursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCurso,true,code-audit-08
+audit-record-09,AU-0000-009,2000/10/12 00:00,2020/03/26 08:00,A,https://es.wikipedia.org/wiki/CursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCurs,true,code-audit-09
+audit-record-10,AU-0000-010,2000/10/12 00:00,2020/03/26 08:00,A,null,true,code-audit-10
+audit-record-11,AU-0000-011,2000/10/12 00:00,2020/03/26 08:00,A,,true,code-audit-11
+audit-record-12,AU-0000-012,2000/10/12 00:00,2020/03/26 08:00,A,ftp://www.example.com/myProfile,true,code-audit-12
+audit-record-13,AU-0000-013,2000/10/12 00:00,2020/03/26 08:00,A,https://www.example.com?ejemplo=ejemplo&id=4,true,code-audit-13
+audit-record-14,AU-0000-014,2000/10/12 00:00,2020/03/26 08:00,A,https://www.example.com?,true,code-audit-14
+audit-record-15,AU-0000-015,2000/10/12 00:00,2020/03/26 08:00,A,https://www.んい建濯よ芝.com,true,code-audit-15
+audit-record-16,AU-0000-016,2000/10/12 00:00,2020/03/26 08:00,B,https://es.wikipedia.org/wiki/Curso,true,code-audit-01
+audit-record-17,AU-0000-017,2000/10/12 00:00,2020/03/26 08:00,C,https://es.wikipedia.org/wiki/Curso,true,code-audit-01
+audit-record-18,AU-0000-018,2000/10/12 00:00,2020/03/26 08:00,F,https://es.wikipedia.org/wiki/Curso,true,code-audit-01
+audit-record-19,AU-0000-019,2000/10/12 00:00,2020/03/26 08:00,A_PLUS,https://es.wikipedia.org/wiki/Curso,true,code-audit-01
+audit-record-20,AU-0000-020,2000/10/12 00:00,2020/03/26 08:00,F_MINUS,https://es.wikipedia.org/wiki/Curso,true,code-audit-01
