@@ -18,6 +18,7 @@ master.menu.sign-out = Sign out
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
+master.menu.anonymous.list-sponsorship = Published sponsorships
 master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.josbanbot-link = 20538111P: Baños Boton, Jose Ramon
 master.menu.anonymous.sonrusmor-link = 77868455T: Rus Morales, Sonia Maria
@@ -29,6 +30,7 @@ master.menu.anonymous.rubpergar-link = 77863706N: Perez Garrido, Ruben
 
 master.menu.authenticated = Authenticated
 master.menu.authenticated.all-risks = List risks
+master.menu.autheticated.list-sponsorship = Published sponsorships
 
 # master.menu.administrator ###################################################
 
@@ -64,3 +66,5 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.become-sponsor = Become a sponsor
+master.menu.user-account.sponsor = Sponsor data
