@@ -1,0 +1,9 @@
+client.clientDashboard.form.label.totalLogsLessThan25 = Registros de progreso totales menor que 25
+client.clientDashboard.form.label.totalLogsLessBetween25And50 = Registros de progreso totales entre 25 y 50
+client.clientDashboard.form.label.totalLogsLessBetween50And75 = Registros de progreso totales entre 50 y 75
+client.clientDashboard.form.label.totalLogsAbove75 = Registros de progreso totales mayores que 75
+client.clientDashboard.form.label.averageBudgetContracts = Presupuesto Medio 
+client.clientDashboard.form.label.deviationBudgetContracts = Desviación del Presupuesto
+client.clientDashboard.form.label.minimunBudgetContracts = Presupuesto mínimo
+client.clientDashboard.form.label.maximumBudgetContracts = Presupuesto máximo
+client.client-dashboard.form.title = Panel del cliente
