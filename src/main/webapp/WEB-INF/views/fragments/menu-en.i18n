@@ -84,6 +84,13 @@ master.menu.developer.training-modules = List my Training Modules
 master.menu.developer.training-sessions = List my Training Sessions
 master.menu.developer.show-developer-dashboard = Dashboard
 
+# master.menu.client ####################################################
+
+master.menu.client = Client
+master.menu.client.contracts= List my Contracts
+master.menu.client.progress-logs= List my Progress Logs
+master.menu.client.show-client-dashboard = Dashboard
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account

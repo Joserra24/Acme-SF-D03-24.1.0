@@ -29,7 +29,7 @@ public class Client extends AbstractRole {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^CLI-\\d{4}$")
+	@Pattern(regexp = "^CLI-\\d{4}$", message = "{validation.client.identification}")
 	private String				identification;
 
 	@NotBlank
@@ -41,6 +41,7 @@ public class Client extends AbstractRole {
 
 	@NotBlank
 	@Email
+	@Length(max = 255)
 	private String				email;
 
 	@URL
