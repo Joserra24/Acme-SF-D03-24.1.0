@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
+import acme.entities.AuditRecord;
 import acme.entities.CodeAudit;
 import acme.entities.Project;
-import acme.enumerated.Mark;
 import acme.enumerated.Type;
 import acme.roles.Auditor;
 
@@ -59,6 +59,7 @@ public class AuditorCodeAuditShowService extends AbstractService<Auditor, CodeAu
 		Dataset dataset;
 		Collection<Project> projects;
 		SelectChoices choices;
+		Collection<AuditRecord> auditRecords = this.repository.findManyAuditRecordsByCodeAuditId(object.getId());
 		SelectChoices choicesType;
 
 		projects = this.repository.findAllProjects();
@@ -66,14 +67,12 @@ public class AuditorCodeAuditShowService extends AbstractService<Auditor, CodeAu
 		choices = SelectChoices.from(projects, "title", object.getProject());
 		choicesType = SelectChoices.from(Type.class, object.getType());
 
-		dataset = super.unbind(object, "code", "execution", "type", "correctiveActions", "optionalLink", "mark", "project");
+		dataset = super.unbind(object, "code", "execution", "type", "correctiveActions", "optionalLink", "draftMode");
 		dataset.put("type", choicesType);
 		dataset.put("project", choices.getSelected().getKey());
 		dataset.put("projects", choices);
 		dataset.put("execution", object.getExecution());
-
-		final Mark modeMark = this.repository.modeMark();
-		dataset.put("mark", modeMark);
+		dataset.put("mark", object.getMark(auditRecords));
 
 		super.getResponse().addData(dataset);
 	}

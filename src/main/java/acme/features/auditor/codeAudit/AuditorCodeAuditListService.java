@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.entities.CodeAudit;
-import acme.enumerated.Mark;
 import acme.roles.Auditor;
 
 @Service
@@ -44,10 +43,12 @@ public class AuditorCodeAuditListService extends AbstractService<Auditor, CodeAu
 		assert object != null;
 
 		Dataset dataset;
+		String project;
 
-		dataset = super.unbind(object, "code", "execution", "type", "correctiveActions", "optionalLink", "draftMode", "project");
-		final Mark modeMark = this.repository.modeMark();
-		dataset.put("mark", modeMark);
+		project = object.getProject().getTitle();
+
+		dataset = super.unbind(object, "code", "execution", "type", "correctiveActions");
+		dataset.put("project", project);
 
 		super.getResponse().addData(dataset);
 

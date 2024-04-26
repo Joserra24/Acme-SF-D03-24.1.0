@@ -10,7 +10,6 @@ import acme.client.repositories.AbstractRepository;
 import acme.entities.AuditRecord;
 import acme.entities.CodeAudit;
 import acme.entities.Project;
-import acme.enumerated.Mark;
 import acme.roles.Auditor;
 
 // HACER METODO PARA CALCULAR LA MARCA
@@ -38,14 +37,13 @@ public interface AuditorCodeAuditRepository extends AbstractRepository {
 	@Query("select p from Project p")
 	Collection<Project> findAllProjects();
 
-	@Query("select p from Project p where p.draftMode = true")
+	@Query("select p from Project p where p.draftMode = false")
 	Collection<Project> findManyProjectsAvailable();
 
 	@Query("select ar from AuditRecord ar where ar.codeAudit.id = :codeAuditId")
 	Collection<AuditRecord> findManyAuditRecordsByCodeAuditId(int codeAuditId);
 
-	default Mark modeMark() {
-		return null;
-	}
+	@Query("Select ca.code from CodeAudit ca")
+	Collection<String> findAllCodes();
 
 }

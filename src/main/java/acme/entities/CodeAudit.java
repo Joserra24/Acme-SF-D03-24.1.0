@@ -1,11 +1,15 @@
 
 package acme.entities;
 
+import java.util.Collection;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -57,18 +61,36 @@ public class CodeAudit extends AbstractEntity {
 
 	// Derived attributes -----------------------------------------------------
 
-	private Mark				mark;
+
+	@Transient
+	public Mark getMark(final Collection<AuditRecord> records) {
+		Map<Mark, Integer> frecMap = new HashMap<>();
+		for (AuditRecord r : records) {
+			Mark mark = r.getMark();
+			frecMap.put(mark, frecMap.getOrDefault(mark, 0) + 1);
+		}
+		Mark mode = null;
+		int max = 0;
+		for (Map.Entry<Mark, Integer> entry : frecMap.entrySet())
+			if (entry.getValue() > max) {
+				max = entry.getValue();
+				mode = entry.getKey();
+			}
+
+		return mode;
+	}
 
 	// Relationships ----------------------------------------------------------
 
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	private Project				project;
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Auditor				auditor;
+	private Project	project;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Auditor	auditor;
 
 }

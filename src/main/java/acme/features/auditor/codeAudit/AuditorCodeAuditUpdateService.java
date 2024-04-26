@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.data.models.Dataset;
-import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
+import acme.entities.AuditRecord;
 import acme.entities.CodeAudit;
 import acme.entities.Project;
 import acme.enumerated.Type;
@@ -54,7 +54,7 @@ public class AuditorCodeAuditUpdateService extends AbstractService<Auditor, Code
 	public void bind(final CodeAudit object) {
 		assert object != null;
 
-		super.bind(object, "code", "execution", "type", "correctiveActions", "optionalLink", "draftMode", "project");
+		super.bind(object, "code", "execution", "type", "correctiveActions", "optionalLink", "draftMode");
 	}
 
 	@Override
@@ -68,26 +68,11 @@ public class AuditorCodeAuditUpdateService extends AbstractService<Auditor, Code
 			if (codeAuditWithCodeDuplicated != null)
 				super.state(codeAuditWithCodeDuplicated.getId() == object.getId(), "code", "auditor.code-audit.form.error.code");
 		}
-
-		/*
-		 * Hacer el de execution (Date)
-		 * 
-		 * if (!super.getBuffer().getErrors().hasErrors("conclusion")) {
-		 * boolean status;
-		 * String message;
-		 * 
-		 * message = object.getConclusion();
-		 * status = this.configuration.hasSpam(message);
-		 * 
-		 * super.state(!status, "conclusion", "auditor.audit.error.spam");
-		 * }
-		 */
 	}
 
 	@Override
 	public void perform(final CodeAudit object) {
 		assert object != null;
-		object.setExecution(MomentHelper.getCurrentMoment());
 
 		this.repository.save(object);
 	}
@@ -100,16 +85,17 @@ public class AuditorCodeAuditUpdateService extends AbstractService<Auditor, Code
 		Collection<Project> projects;
 		SelectChoices choices;
 		SelectChoices choicesType;
+		Collection<AuditRecord> auditRecords = this.repository.findManyAuditRecordsByCodeAuditId(object.getId());
 
 		projects = this.repository.findManyProjectsAvailable();
 
 		choicesType = SelectChoices.from(Type.class, object.getType());
 		choices = SelectChoices.from(projects, "title", object.getProject());
 
-		dataset = super.unbind(object, "code", "execution", "type", "correctiveActions", "optionalLink", "draftMode", "project");
+		dataset = super.unbind(object, "code", "execution", "type", "correctiveActions", "optionalLink", "draftMode");
 		dataset.put("type", choicesType);
 		dataset.put("project", choices.getSelected().getKey());
-		dataset.put("projects", choices);
+		dataset.put("mark", object.getMark(auditRecords));
 
 		super.getResponse().addData(dataset);
 	}

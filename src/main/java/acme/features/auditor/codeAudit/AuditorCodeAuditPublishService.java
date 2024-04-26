@@ -16,7 +16,6 @@ import acme.enumerated.Mark;
 import acme.enumerated.Type;
 import acme.roles.Auditor;
 
-// REVISAR EN VALIDATE LA MARCA AL MENOS C
 @Service
 public class AuditorCodeAuditPublishService extends AbstractService<Auditor, CodeAudit> {
 
@@ -56,20 +55,26 @@ public class AuditorCodeAuditPublishService extends AbstractService<Auditor, Cod
 	public void bind(final CodeAudit object) {
 		assert object != null;
 
-		super.bind(object, "code", "execution", "type", "correctiveActions", "optionalLink", "draftMode", "project");
+		super.bind(object, "code", "execution", "type", "correctiveActions", "optionalLink");
 	}
 
 	@Override
 	public void validate(final CodeAudit object) {
 		assert object != null;
 		boolean draftModeAuditRecord;
+		Collection<AuditRecord> auditRecords = this.repository.findManyAuditRecordsByCodeAuditId(object.getId());
 
-		final Collection<AuditRecord> auditRecords = this.repository.findManyAuditRecordsByCodeAuditId(object.getId());
-		super.state(object.getMark() != Mark.F && object.getMark() != Mark.F_MINUS, "*", "auditor.code-audit.form.error.markNotAtLeastC");
+		for (AuditRecord ar : auditRecords)
+			super.state(!ar.isDraftMode(), "code", "auditor.code-audit.form.error.draftMode");
 
 		if (!auditRecords.isEmpty()) {
 			draftModeAuditRecord = auditRecords.stream().anyMatch(x -> !x.isDraftMode());
 			super.state(draftModeAuditRecord, "*", "auditor.code-audit.form.error.auditRecordInDraftMode");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("mark")) {
+			Mark mark = object.getMark(auditRecords);
+			super.state(mark == Mark.A || mark == Mark.A_PLUS || mark == Mark.B || mark == Mark.C, "mark", "auditor.code-audit.form.error.markNotAtLeastC");
 		}
 	}
 
@@ -89,6 +94,7 @@ public class AuditorCodeAuditPublishService extends AbstractService<Auditor, Cod
 		Dataset dataset;
 		Collection<Project> projects;
 		SelectChoices choices;
+		Collection<AuditRecord> auditRecords = this.repository.findManyAuditRecordsByCodeAuditId(object.getId());
 		SelectChoices choicesType;
 
 		projects = this.repository.findManyProjectsAvailable();
@@ -96,10 +102,11 @@ public class AuditorCodeAuditPublishService extends AbstractService<Auditor, Cod
 		choicesType = SelectChoices.from(Type.class, object.getType());
 		choices = SelectChoices.from(projects, "title", object.getProject());
 
-		dataset = super.unbind(object, "code", "execution", "type", "correctiveActions", "optionalLink", "draftMode", "project");
+		dataset = super.unbind(object, "code", "execution", "type", "correctiveActions", "optionalLink", "draftMode");
 		dataset.put("type", choicesType);
 		dataset.put("project", choices.getSelected().getKey());
 		dataset.put("projects", choices);
+		dataset.put("mark", object.getMark(auditRecords));
 
 		super.getResponse().addData(dataset);
 	}

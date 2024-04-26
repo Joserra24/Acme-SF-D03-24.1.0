@@ -11,7 +11,6 @@ import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
 import acme.entities.AuditRecord;
 import acme.entities.CodeAudit;
-import acme.entities.Project;
 import acme.enumerated.Type;
 import acme.roles.Auditor;
 
@@ -56,7 +55,7 @@ public class AuditorCodeAuditDeleteService extends AbstractService<Auditor, Code
 	public void bind(final CodeAudit object) {
 		assert object != null;
 
-		super.bind(object, "code", "execution", "type", "correctiveActions", "optionalLink", "draftMode", "project");
+		super.bind(object, "code", "execution", "type", "correctiveActions", "optionalLink");
 
 	}
 
@@ -76,25 +75,14 @@ public class AuditorCodeAuditDeleteService extends AbstractService<Auditor, Code
 		this.repository.delete(object);
 	}
 
-	//REVISAR
 	@Override
 	public void unbind(final CodeAudit object) {
 		assert object != null;
 
 		Dataset dataset;
-		Collection<Project> projects;
-		SelectChoices choices;
-		SelectChoices choicesType;
 
-		projects = this.repository.findManyProjectsAvailable();
-
-		choicesType = SelectChoices.from(Type.class, object.getType());
-		choices = SelectChoices.from(projects, "title", object.getProject());
-
-		dataset = super.unbind(object, "code", "execution", "type", "correctiveActions", "optionalLink", "draftMode", "project");
-		dataset.put("type", choicesType);
-		dataset.put("project", choices.getSelected().getKey());
-		dataset.put("projects", choices);
+		dataset = super.unbind(object, "code", "execution", "type", "correctiveActions", "mark", "optionalLink");
+		dataset.put("types", SelectChoices.from(Type.class, object.getType()));
 
 		super.getResponse().addData(dataset);
 	}

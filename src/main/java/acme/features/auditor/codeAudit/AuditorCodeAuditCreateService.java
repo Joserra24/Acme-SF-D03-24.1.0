@@ -55,8 +55,6 @@ public class AuditorCodeAuditCreateService extends AbstractService<Auditor, Code
 
 	}
 
-	//validar execution
-
 	@Override
 	public void validate(final CodeAudit object) {
 		assert object != null;
@@ -93,7 +91,7 @@ public class AuditorCodeAuditCreateService extends AbstractService<Auditor, Code
 		dataset = super.unbind(object, "code", "execution", "type", "correctiveActions", "optionalLink", "project");
 		dataset.put("project", choices.getSelected().getKey());
 		dataset.put("projects", choices);
-		dataset.put("type", choicesType);
+		dataset.put("types", choicesType);
 		dataset.put("auditor", object.getAuditor());
 
 		super.getResponse().addData(dataset);
