@@ -13,7 +13,7 @@ objective-08,2000/03/06 11:00,æ¨£æœ¬æ¨™é¡Œ,Lorem ipsum,LOW,false,20
 objective-09,2000/03/06 11:00,貸んい建濯よ芝弾テソ,Lorem ipsum,LOW,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso
 objective-10,2000/03/06 11:00,<p>This text is in HTML</p>,Lorem ipsum,LOW,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso
 objective-11,2000/03/06 11:00,<script>alert('Hi')</script>,Lorem ipsum,LOW,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso
-objective-12,2000/03/06 11:00,'' or 'A'='A',Lorem ipsum,LOW,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso
+objective-12,2000/03/06 11:00,' or 'A'='A',Lorem ipsum,LOW,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso
 objective-13,2000/03/06 11:00,SELECT c FROM Contract OR 1=1,Lorem ipsum,LOW,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso
 objective-14,2000/03/06 11:00,Lorem ipsum,L,LOW,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso
 objective-15,2000/03/06 11:00,Lorem ipsum,Lo,LOW,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso
@@ -23,7 +23,7 @@ objective-18,2000/03/06 11:00,Lorem ipsum,æ¨£æœ¬æ¨™é¡Œ,LOW,false,20
 objective-19,2000/03/06 11:00,Lorem ipsum,貸んい建濯よ芝弾テソ,LOW,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso
 objective-20,2000/03/06 11:00,Lorem ipsum,<p>This text is in HTML</p>,LOW,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso
 objective-21,2000/03/06 11:00,Lorem ipsum,<script>alert('Hi')</script>,LOW,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso
-objective-22,2000/03/06 11:00,Lorem ipsum,'' or 'A'='A',LOW,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso
+objective-22,2000/03/06 11:00,Lorem ipsum,' or 'A'='A',LOW,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso
 objective-23,2000/03/06 11:00,Lorem ipsum,SELECT c FROM Contract OR 1=1,LOW,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso
 objective-24,2000/03/06 11:00,Lorem ipsum,Lorem ipsum,MEDIUM,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso
 objective-25,2000/03/06 11:00,Lorem ipsum,Lorem ipsum,HIGH,false,2000/03/06 12:00,2000/03/08 15:00,https://es.wikipedia.org/wiki/Curso

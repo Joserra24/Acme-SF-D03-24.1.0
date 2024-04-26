@@ -8,7 +8,7 @@ user-story-06,æ¨£æœ¬æ¨™é¡Œ,Lorem ipsum,10,Lorem ipsum,MUST,https://
 user-story-07,貸んい建濯よ芝弾テソ,Lorem ipsum,10,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
 user-story-08,<p>This text is in HTML</p>,Lorem ipsum,10,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
 user-story-09,<script>alert('Hi')</script>,Lorem ipsum,10,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
-user-story-10,'' or 'A'='A',Lorem ipsum,10,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
+user-story-10,' or 'A'='A',Lorem ipsum,10,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
 user-story-11,SELECT ua FROM UserAccount ua,Lorem ipsum,10,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
 user-story-12,Lorem ipsum,L,10,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
 user-story-13,Lorem ipsum,Lo,10,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
@@ -18,7 +18,7 @@ user-story-16,Lorem ipsum,æ¨£æœ¬æ¨™é¡Œ,10,Lorem ipsum,MUST,https://
 user-story-17,Lorem ipsum,貸んい建濯よ芝弾テソ,10,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
 user-story-18,Lorem ipsum,<p>This text is in HTML</p>,10,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
 user-story-19,Lorem ipsum,<script>alert('Hi')</script>,10,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
-user-story-20,Lorem ipsum,'' or 'A'='A',10,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
+user-story-20,Lorem ipsum,' or 'A'='A',10,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
 user-story-21,Lorem ipsum,SELECT c FROM Contract OR 1=1,10,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
 user-story-22,Lorem ipsum,Lorem ipsum,0,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
 user-story-22.1,Lorem ipsum,Lorem ipsum,1,Lorem ipsum,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-02
@@ -33,7 +33,7 @@ user-story-28,Lorem ipsum,Lorem ipsum,10,æ¨£æœ¬æ¨™é¡Œ,MUST,https://
 user-story-29,Lorem ipsum,Lorem ipsum,10,貸んい建濯よ芝弾テソ,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
 user-story-30,Lorem ipsum,Lorem ipsum,10,<p>This text is in HTML</p>,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
 user-story-31,Lorem ipsum,Lorem ipsum,10,<script>alert('Hi')</script>,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
-user-story-32,Lorem ipsum,Lorem ipsum,10,'' or 'A'='A',MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
+user-story-32,Lorem ipsum,Lorem ipsum,10,' or 'A'='A',MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
 user-story-33,Lorem ipsum,Lorem ipsum,10,SELECT c FROM Contract OR 1=1,MUST,https://es.wikipedia.org/wiki/Curso,true,manager-01
 user-story-34,Lorem ipsum,Lorem ipsum,10,Lorem ipsum,SHOULD,https://es.wikipedia.org/wiki/Curso,true,manager-01
 user-story-35,Lorem ipsum,Lorem ipsum,10,Lorem ipsum,COULD,https://es.wikipedia.org/wiki/Curso,true,manager-01

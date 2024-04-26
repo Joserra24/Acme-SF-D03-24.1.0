@@ -15,7 +15,7 @@ training-module-10,AAA-010,2000/12/12 00:00,æ¨£æœ¬æ¨™é¡Œ,BASIC,2001
 training-module-11,AAA-011,2000/12/12 00:00,貸んい建濯よ芝弾テソ,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-02
 training-module-12,AAA-012,2000/12/12 00:00,<p>This text is in HTML</p>,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-02
 training-module-13,AAA-013,2000/12/12 00:00,<script>alert('Hi')</script>,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-02
-training-module-14,AAA-014,2000/12/12 00:00,'' or 'A'='A',BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
+training-module-14,AAA-014,2000/12/12 00:00,' or 'A'='A',BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
 training-module-15,AAA-015,2000/12/12 00:00,SELECT c FROM Contract OR 1=1,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
 training-module-16,AAA-016,2000/12/12 00:00,Lorem ipsum,INTERMEDIATE,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
 training-module-17,AAA-017,2000/12/12 00:00,Lorem ipsum,ADVANCED,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01

@@ -18,6 +18,9 @@ manager.project.form.label.cost = Coste
 manager.project.form.label.link = URL
 manager.project.form.label.draft-mode = Borrador
 
+manager.project.form.button.user-stories = UserStories
+
+
 manager.project.form.button.create = Crear
 manager.project.form.button.delete = Eliminar
 manager.project.form.button.update = Actualizar
