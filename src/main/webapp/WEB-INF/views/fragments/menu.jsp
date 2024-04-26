@@ -27,7 +27,8 @@
 			<acme:menu-suboption code="master.menu.anonymous.rubpergar-link" action="https://www.hltv.org"/>
 			<acme:menu-separator/>			
 			<acme:menu-suboption code="master.menu.anonymous.claim-list" action="/any/claim/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.training-module-list" action="/any/training-module/list"/>		
+			<acme:menu-suboption code="master.menu.anonymous.training-module-list" action="/any/training-module/list"/>	
+			<acme:menu-suboption code="master.menu.anonymous.project-list" action="/any/project/list"/>		
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">

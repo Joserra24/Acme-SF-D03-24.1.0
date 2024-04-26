@@ -1,0 +1,34 @@
+any.project.list.title = Project List
+any.project.form.title = Project Form
+
+any.project.list.label.code = Code
+any.project.list.label.title = Title
+any.project.list.label.abstract-project = Abstract Project
+any.project.list.label.cost = Cost
+any.project.list.label.link = Link
+any.project.list.label.draft-mode = Draft
+
+any.project.list.button.create = Create
+
+any.project.form.label.code = Code
+any.project.form.label.titlet = Title
+any.project.form.label.abstract-project = Abstract project
+any.project.form.label.cost= Cost
+any.project.form.label.link = Link
+any.project.form.label.draft-mode = Draft
+
+
+any.training-module.form.button.create = Create
+any.training-module.form.button.delete = Delete
+any.training-module.form.button.update = Update
+any.training-module.form.button.publish = Publish
+any.training-module.form.button.training-sessions = Training Sessions
+
+
+
+
+developer.training-module.form.error.duplicated = This code is already used
+developer.training-module.form.error.invalid-creation-moment = Invalid creation moment
+developer.training-module.form.error.invalid-update-moment = Invalid update moment
+developer.training-module.form.error.code =  This code is already used
+developer.training-module.form.error.trainingModuleWithOutTrainingSessions = Cannot publish Traninig Module because it has not Training Sessions
