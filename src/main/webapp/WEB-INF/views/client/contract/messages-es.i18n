@@ -1,0 +1,34 @@
+
+client.contract.list.title = Lista de Contratos
+client.contract.form.title = Detalles de Contrato
+
+client.contract.list.label.code = Código
+client.contract.list.label.instantiation-moment = Momento de Instanciación
+client.contract.list.label.provider-name = Nombre del Proveedor
+client.contract.list.label.customer-name = Nombre del Cliente
+client.contract.list.label.goals = Objetivos
+client.contract.list.label.budget = Presupuesto
+client.contract.list.label.project = Proyecto
+client.contract.list.label.draft-mode = Borrador
+
+client.contract.list.button.create = Crear
+
+client.contract.form.label.code = Código
+client.contract.form.label.instantiation-moment = Momento de Instanciación
+client.contract.form.label.provider-name = Nombre del Proveedor
+client.contract.form.label.customer-name = Nombre del Cliente
+client.contract.form.label.goals = Objetivos
+client.contract.form.label.budget = Presupuesto
+client.contract.form.label.project = Proyecto
+client.contract.form.label.draft-mode = Borrador
+
+client.contract.form.button.create = Crear
+client.contract.form.button.delete = Borrar
+client.contract.form.button.update = Actualizar
+client.contract.form.button.publish = Publicar
+client.contract.form.button.progress-logs = Registros de Progreso
+
+client.contract.form.error.duplicated = Este código ya está en uso
+client.contract.form.error.invalid-instantiation-moment = Momento de instanciación inválido
+client.contract.form.error.code =  Este código es inválido
+client.contract.form.error.contractWithOutProgressLogs = No se puede publicar el Contrato porque no tiene Registros de Progreso

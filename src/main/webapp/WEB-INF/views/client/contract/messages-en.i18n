@@ -1,0 +1,34 @@
+
+client.contract.list.title = Contract List
+client.contract.form.title = Contract Form
+
+client.contract.list.label.code = Code
+client.contract.list.label.instantiation-moment = Instantiation Moment
+client.contract.list.label.provider-name = Provider Name
+client.contract.list.label.customer-name = Customer Name
+client.contract.list.label.goals = Goals
+client.contract.list.label.budget = Budget
+client.contract.list.label.project = Project
+client.contract.list.label.draft-mode = Draft
+
+client.contract.list.button.create = Create
+
+client.contract.form.label.code = Code
+client.contract.form.label.instantiation-moment = Instantiation Moment
+client.contract.form.label.provider-name = Provider Name
+client.contract.form.label.customer-name = Customer Name
+client.contract.form.label.goals = Goals
+client.contract.form.label.budget = Budget
+client.contract.form.label.project = Project
+client.contract.form.label.draft-mode = Draft
+
+client.contract.form.button.create = Create
+client.contract.form.button.delete = Delete
+client.contract.form.button.update = Update
+client.contract.form.button.publish = Publish
+client.contract.form.button.progress-logs = Progress Logs
+
+client.contract.form.error.duplicated = This code is already used
+client.contract.form.error.invalid-instantiation-moment = Invalid instantiation moment
+client.contract.form.error.code =  This code is invalid
+client.contract.form.error.contractWithOutProgressLogs = Cannot publish Contract because it has not Progress Logs

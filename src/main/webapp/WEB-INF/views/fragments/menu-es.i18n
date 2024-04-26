@@ -84,6 +84,13 @@ master.menu.manager.projects = Listado de mis Proyectos
 master.menu.manager.user-stories = Listado de mis User Stories
 master.menu.manager.show-manager-dashboard = Mis estadisticas
 
+# master.menu.client ####################################################
+
+master.menu.client = Cliente
+master.menu.client.contracts= Listado de mis Contracts
+master.menu.client.progress-logs= Listado de mis Registros de Progreso
+master.menu.client.show-client-dashboard = Mis estadisticas
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
