@@ -1,26 +1,15 @@
+manager.manager-dashboard.form.title = Manager Estadísticas
 
-manager.project.list.title = Lista de Proyectos
-manager.project.form.title = Detalles del Proyecto
-
-manager.project.list.label.code = Codigo
-manager.project.list.label.title = Titulo
-manager.project.list.label.abstract-project = Resumen
-manager.project.list.label.cost = Coste
-manager.project.list.label.link = URL
-manager.project.list.label.draft-mode = Borrador
-
-manager.project.list.button.create = Crear
-
-manager.project.form.label.code = Codigo
-manager.project.form.label.title = Titulo
-manager.project.form.label.abstract-project = Resumen
-manager.project.form.label.cost = Coste
-manager.project.form.label.link = URL
-manager.project.form.label.draft-mode = Borrador
-
-manager.project.form.button.create = Crear
-manager.project.form.button.delete = Eliminar
-manager.project.form.button.update = Actualizar
-manager.project.form.button.publish = Publicar
-
-manager.project.form.error.code = Codigo duplicado
+manager.dashboard.form.title.general-indicators = Indicadores
+manager.dashboard.form.label.total-must-user-story 	= Total MUST user stories
+manager.dashboard.form.label.total-should-user-story  = Total SHOULD user stories	
+manager.dashboard.form.label.total-could-user-story  = Total COULD user stories	
+manager.dashboard.form.label.total-wont-user-story = Total WONT user stories 	
+manager.dashboard.form.label.average-estimated-cost-user-story = Media de Estimated Cost User Story
+manager.dashboard.form.label.deviation-estimated-cost-user-story = Desviación de Estimated Cost User Story
+manager.dashboard.form.label.minimum-estimated-cost-user-story 	= Minimo de Estimated Cost User Story
+manager.dashboard.form.label.maximum-estimated-cost-user-story = Maximo de Estimated Cost User Story
+manager.dashboard.form.label.average-cost-project = Media de Cost Project
+manager.dashboard.form.label.deviation-cost-project = Desviación de Cost Project 	
+manager.dashboard.form.label.minimum-cost-project = Minimo de Cost Project
+manager.dashboard.form.label.maximum-cost-project = Maximo de Cost Project
