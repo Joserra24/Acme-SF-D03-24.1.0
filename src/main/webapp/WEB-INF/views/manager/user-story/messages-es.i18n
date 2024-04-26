@@ -1,0 +1,26 @@
+
+manager.user-story.list.title = Lista  de User Stories
+manager.user-story.form.title = Detalles de User Stories
+
+manager.user-story.list.label.title = Titulo
+manager.user-story.list.label.description = Descripcion
+manager.user-story.list.label.estimated-cost = Coste estimado
+manager.user-story.list.label.acceptance-criteria = Criterio de aceptacion
+manager.user-story.list.label.priority = Prioridad
+manager.user-story.list.label.link = URL
+manager.user-story.list.label.draft-mode = Borrador
+
+manager.user-story.list.button.create = Crear
+
+manager.user-story.form.label.title = Titulo
+manager.user-story.form.label.description = Descripcion
+manager.user-story.form.label.estimated-cost = Coste estimado
+manager.user-story.form.label.acceptance-criteria = Criterio de aceptacion
+manager.user-story.form.label.priority = Prioridad
+manager.user-story.form.label.link = URL
+manager.user-story.form.label.draft-mode = Borrador
+
+manager.user-story.form.button.create = Crear
+manager.user-story.form.button.delete = Eliminar
+manager.user-story.form.button.update = Actualizar
+manager.user-story.form.button.publish = Publicar

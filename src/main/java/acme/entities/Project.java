@@ -5,6 +5,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -29,7 +31,7 @@ public class Project extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^[A-Z]{3}-\\d{4}$")
+	@Pattern(regexp = "^[A-Z]{3}-\\d{4}$", message = "{validation.project.code}")
 	private String				code;
 
 	@NotBlank
@@ -38,8 +40,10 @@ public class Project extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	private String				$abstract;
+	private String				abstractProject;
 
+	@Min(0)
+	@Max(10000)
 	private int					cost;
 
 	@URL

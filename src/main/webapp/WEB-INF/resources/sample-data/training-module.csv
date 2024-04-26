@@ -1,16 +1,32 @@
-key,code,creation-moment,details,difficulty-level,update-moment,link,estimated-total-time,key:project,key:developer
-training-module-01,JKY-746,2000/04/23 21:00,ppppppppppppppppp,BASIC,2001/05/23 22:00,https://es.wikipedia.org/wiki/Wikipedia,58,project-01,developer-01
-training-module-02,KKI-879,2000/05/22 22:00,fdkafldansfjadsnfjdanfjdsnfadsjfnjlasdfadsnfa,INTERMEDIATE,2001/06/24 21:00,null,68,project-02,developer-02
-training-module-03,OPN-345,2000/06/21 23:00,fjansjfadnsfjnasdlfadsnfjldnfjlsadnljasdnfs,ADVANCED,2001/07/25 20:00,https://pandas.pydata.org/,78,project-03,developer-01
-training-module-04,ASD-123,2000/07/20 00:00,rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr,ADVANCED,2001/08/26 19:00,null,88,project-04,developer-02
-training-module-05,KLD-332,2000/08/19 15:00,s,INTERMEDIATE,2001/09/27 18:00,null,98,project-05,developer-01
-training-module-06,POI-987,2000/09/15 12:00,lorem ipsum dolor sit amet consectetur adipiscing elit,INTERMEDIATE,2001/10/28 17:00,https://github.com/,48,project-01,developer-02
-training-module-07,TYU-456,2000/10/12 18:00,suspendisse potenti nullam ac tortor vitae purus faucibus ornare,ADVANCED,2001/11/29 16:00,https://www.python.org/,58,project-02,developer-01
-training-module-08,BVC-123,2000/11/09 10:00,ut efficitur justo id risus tempus convallis,INTERMEDIATE,2001/12/30 15:00,null,68,project-03,developer-02
-training-module-09,QWE-789,2000/12/06 06:00,nunc consequat urna id nibh convallis tristique,ADVANCED,2001/01/31 14:00,https://www.tensorflow.org/,78,project-04,developer-01
-training-module-10,ZXC-567,2000/01/03 03:00,nullam et sem nec odio fermentum aliquam,INTERMEDIATE,2001/02/01 13:00,null,88,project-05,developer-02
-training-module-11,RTY-234,2000/02/28 14:00,morbi vestibulum turpis nec bibendum cursus,ADVANCED,2001/03/02 12:00,https://scikit-learn.org/,98,project-01,developer-01
-training-module-12,FVB-890,2000/03/26 08:00,dtrdtdrtdr,INTERMEDIATE,2001/04/03 11:00,null,48,project-02,developer-02
-training-module-13,UIO-765,2000/04/23 21:00,phasellus efficitur dolor sit amet ligula mollis luctus,ADVANCED,2001/05/04 10:00,https://www.nltk.org/,58,project-03,developer-01
-training-module-14,HJK-321,2000/05/22 22:00,curabitur sed massa vel nulla maximus vestibulum,INTERMEDIATE,2001/06/05 09:00,null,68,project-04,developer-02
-training-module-15,LKM-654,2000/06/21 23:00,fusce eget mi id velit fermentum elementum ac nec elit,ADVANCED,2001/07/06 08:00,https://keras.io/,78,project-05,developer-01
+key,code,creation-moment,details,difficulty-level,update-moment,link,draft-mode,key:project,key:developer
+training-module-01,AAA-001,2000/12/12 00:00,Lorem ipsum,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
+training-module-02,AA-002,2000/12/12 00:00,Lorem ipsum,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
+training-module-03,A-003,2000/12/12 00:00,Lorem ipsum,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
+training-module-04,AAA-004,2000/01/08 00:00,Lorem ipsum,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
+training-module-05,AAA-005,2000/01/08 00:01,Lorem ipsum,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
+training-module-05.1,AAA-105,2020/02/29 00:00,Lorem ipsum,BASIC,2020/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
+training-module-05.2,AAA-205,2022/07/23 00:00,Lorem ipsum,BASIC,2022/07/24 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
+training-module-05.3,AAA-305,2022/07/22 23:59,Lorem ipsum,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
+training-module-06,AAA-006,2000/12/12 00:00,L,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-02,developer-01
+training-module-07,AAA-007,2000/12/12 00:00,Lo,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-02,developer-01
+training-module-08,AAA-008,2000/12/12 00:00,LoremipsumLoremipsumLoremipsumLoremipsumLoremipsumLoremipsumLoremipsumLoremipsumLoremipsumLoremipsum,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-02,developer-01
+training-module-09,AAA-009,2000/12/12 00:00,LoremipsumLoremipsumLoremipsumLoremipsumLoremipsumLoremipsumLoremipsumLoremipsumLoremipsumLoremipsu,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-02,developer-01
+training-module-10,AAA-010,2000/12/12 00:00,æ¨£æœ¬æ¨™é¡Œ,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-02
+training-module-11,AAA-011,2000/12/12 00:00,貸んい建濯よ芝弾テソ,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-02
+training-module-12,AAA-012,2000/12/12 00:00,<p>This text is in HTML</p>,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-02
+training-module-13,AAA-013,2000/12/12 00:00,<script>alert('Hi')</script>,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-02
+training-module-14,AAA-014,2000/12/12 00:00,' or 'A'='A',BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
+training-module-15,AAA-015,2000/12/12 00:00,SELECT c FROM Contract OR 1=1,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
+training-module-16,AAA-016,2000/12/12 00:00,Lorem ipsum,INTERMEDIATE,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
+training-module-17,AAA-017,2000/12/12 00:00,Lorem ipsum,ADVANCED,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
+training-module-18,AAA-018,2000/12/12 00:00,Lorem ipsum,BASIC,2000/12/12 00:01,https://es.wikipedia.org/wiki/Curso,true,project-01,developer-01
+training-module-19,AAA-019,2000/12/12 00:00,Lorem ipsum,BASIC,2000/12/12 00:01,,true,project-01,developer-01
+training-module-19.1,AAA-119,2000/12/12 00:00,Lorem ipsum,BASIC,2000/12/12 00:01,ftp://www.example.com/myProfile,true,project-01,developer-01
+training-module-19.2,AAA-219,2000/12/12 00:00,Lorem ipsum,BASIC,2000/12/12 00:01,https://www.example.com?ejemplo=ejemplo&id=4,true,project-01,developer-01
+training-module-19.3,AAA-319,2000/12/12 00:00,Lorem ipsum,BASIC,2000/12/12 00:01,https://www.example.com?,true,project-01,developer-01
+training-module-19.4,AAA-419,2000/12/12 00:00,Lorem ipsum,BASIC,2000/12/12 00:01,https://www.んい建濯よ芝.com,true,project-01,developer-01
+training-module-20,AAA-020,2000/12/12 00:00,Lorem ipsum,BASIC,2000/12/12 00:01,https://es.wikipedia.org/wiki/CursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCurso,true,project-01,developer-01
+training-module-21,AAA-021,2000/12/12 00:00,Lorem ipsum,BASIC,2000/12/12 00:01,https://es.wikipedia.org/wiki/CursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCursoCurs,true,project-01,developer-01
+training-module-22,AAA-022,2000/12/12 00:00,Lorem ipsum,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-02,developer-02
+training-module-23,AAA-023,2000/12/12 00:00,Lorem ipsum,BASIC,2001/12/12 00:00,https://es.wikipedia.org/wiki/Curso,true,project-02,developer-02
+training-module-24,AAA-024,2000/12/12 00:00,Lorem ipsum,BASIC,2001/12/12 00:00,null,true,project-02,developer-02
