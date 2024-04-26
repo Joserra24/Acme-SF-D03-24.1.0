@@ -1,26 +1,12 @@
 
-manager.project.list.title = Lista de Proyectos
-manager.project.form.title = Detalles del Proyecto
 
-manager.project.list.label.code = Codigo
-manager.project.list.label.title = Titulo
-manager.project.list.label.abstract-project = Resumen
-manager.project.list.label.cost = Coste
-manager.project.list.label.link = URL
-manager.project.list.label.draft-mode = Borrador
+developer.developer-dashboard.form.title = Developer Estadísticas
 
-manager.project.list.button.create = Crear
+developer.dashboard.form.title.general-indicators = Indicadores
 
-manager.project.form.label.code = Codigo
-manager.project.form.label.title = Titulo
-manager.project.form.label.abstract-project = Resumen
-manager.project.form.label.cost = Coste
-manager.project.form.label.link = URL
-manager.project.form.label.draft-mode = Borrador
-
-manager.project.form.button.create = Crear
-manager.project.form.button.delete = Eliminar
-manager.project.form.button.update = Actualizar
-manager.project.form.button.publish = Publicar
-
-manager.project.form.error.code = Codigo duplicado
+developer.dashboard.form.label.total-training-modules-with-update-moment = Total Training Modules con Update Moment
+developer.dashboard.form.label.total-training-sessions-with-link =	Total Training Session con Link
+developer.dashboard.form.label.average-time-training-module = Media del Time de Training Module
+developer.dashboard.form.label.deviation-time-training-module =	Desviacion del Time de Training Module
+developer.dashboard.form.label.minimum-time-training-module = Minimo del Time de Training Module
+developer.dashboard.form.label.maximum-time-training-module = Maximo del Time de Training Module
