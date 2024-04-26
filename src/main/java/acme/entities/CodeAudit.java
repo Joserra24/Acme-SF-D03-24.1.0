@@ -1,11 +1,15 @@
 
 package acme.entities;
 
+import java.util.Collection;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -18,6 +22,7 @@ import org.hibernate.validator.constraints.URL;
 import acme.client.data.AbstractEntity;
 import acme.enumerated.Mark;
 import acme.enumerated.Type;
+import acme.roles.Auditor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -34,7 +39,7 @@ public class CodeAudit extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^[A-Z]{1,3}-\\d{3}$")
+	@Pattern(regexp = "^[A-Z]{1,3}-\\d{3}$", message = "{validation.codeAudit.code}")
 	private String				code;
 
 	@NotNull
@@ -52,15 +57,40 @@ public class CodeAudit extends AbstractEntity {
 	@Length(max = 255)
 	private String				optionalLink;
 
+	private boolean				draftMode;
+
 	// Derived attributes -----------------------------------------------------
 
-	private Mark				mark;
+
+	@Transient
+	public Mark getMark(final Collection<AuditRecord> records) {
+		Map<Mark, Integer> frecMap = new HashMap<>();
+		for (AuditRecord r : records) {
+			Mark mark = r.getMark();
+			frecMap.put(mark, frecMap.getOrDefault(mark, 0) + 1);
+		}
+		Mark mode = null;
+		int max = 0;
+		for (Map.Entry<Mark, Integer> entry : frecMap.entrySet())
+			if (entry.getValue() > max) {
+				max = entry.getValue();
+				mode = entry.getKey();
+			}
+
+		return mode;
+	}
 
 	// Relationships ----------------------------------------------------------
+
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private Project				project;
+	private Project	project;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Auditor	auditor;
 
 }
