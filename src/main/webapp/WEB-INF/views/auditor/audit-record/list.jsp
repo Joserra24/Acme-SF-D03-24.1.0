@@ -5,12 +5,9 @@
 
 <acme:list>
 	<acme:list-column code="auditor.audit-record.list.label.code" path="code" width="10%"/>
-	<acme:list-column code="auditor.audit-record.list.label.initial-period" path="initialPeriod" width="10%"/>
-	<acme:list-column code="auditor.audit-record.list.label.final-period" path="finalPeriod" width="10%"/>
 	<acme:list-column code="auditor.audit-record.list.label.mark" path="mark" width="10%"/>
-	<acme:list-column code="auditor.audit-record.list.label.optional-link" path="optionalLink" width="10%"/>
 	<acme:list-column code="auditor.audit-record.list.label.draft-mode" path="draftMode" width="10%"/>
-	<acme:list-column code="auditor.audit-record.list.label.code-audit" path="codeAudit" width="10%"/>
+	<acme:list-column code="auditor.audit-record.list.label.final-period" path="finalPeriod" width="10%"/>	
 </acme:list>
 
-<acme:button code="auditor.audit-record.list.button.create" action="/auditor/audit-record/create"/>
+<acme:button code="auditor.audit-record.list.button.create" action="/auditor/audit-record/create?codeAuditId=${codeAuditId}"/>

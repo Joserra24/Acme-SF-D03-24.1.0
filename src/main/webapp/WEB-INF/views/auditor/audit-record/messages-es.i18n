@@ -2,12 +2,9 @@ auditor.audit-record.list.title = Audit Record List
 auditor.audit-record.form.title = Detalles de Audit Record
 
 auditor.audit-record.list.label.code = Codigo
-auditor.audit-record.list.label.initial-period = Periodo Inicial
 auditor.audit-record.list.label.final-period = Periodo Final
 auditor.audit-record.list.label.mark = Nota
-auditor.audit-record.list.label.optional-link = URL
 auditor.audit-record.list.label.draft-mode = Borrador
-auditor.audit-record.list.label.code-audit = Code Audit
 
 
 auditor.audit-record.list.button.create = Crear

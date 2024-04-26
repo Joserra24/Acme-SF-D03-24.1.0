@@ -13,8 +13,8 @@ import acme.entities.CodeAudit;
 @Repository
 public interface AuditorAuditRecordRepository extends AbstractRepository {
 
-	@Query("select ar from AuditRecord ar where ar.codeAudit.auditor.id = :auditorId")
-	Collection<AuditRecord> findManyAuditRecordsByAuditorId(int auditorId);
+	@Query("select ar from AuditRecord ar where ar.codeAudit.auditor.id = :id")
+	Collection<AuditRecord> findManyAuditRecordsByAuditorId(int id);
 
 	@Query("select ca from CodeAudit ca where ca.id = :id")
 	CodeAudit findOneCodeAuditById(int id);
@@ -25,8 +25,8 @@ public interface AuditorAuditRecordRepository extends AbstractRepository {
 	@Query("SELECT ca FROM CodeAudit ca JOIN ca.project p WHERE ca.draftMode = true AND p.draftMode = true")
 	Collection<CodeAudit> findManyCodeAuditsAvailable();
 
-	@Query("select ar from AuditRecord ar where ar.id = :auditRecordId")
-	AuditRecord findOneAuditRecordById(int auditRecordId);
+	@Query("select ar from AuditRecord ar where ar.id = :id")
+	AuditRecord findOneAuditRecordById(int id);
 
 	@Query("select ca from CodeAudit ca")
 	Collection<CodeAudit> findAllCodeAudits();
@@ -34,7 +34,7 @@ public interface AuditorAuditRecordRepository extends AbstractRepository {
 	@Query("select ca from CodeAudit ca where ca.draftMode = true")
 	Collection<CodeAudit> findManyCodeAuditAvailable2();
 
-	@Query("select ar from AuditRecord ar where ar.codeAudit.id = :masterId")
-	Collection<AuditRecord> findManyAuditRecordsByCodeAuditId(int masterId);
+	@Query("select ar from AuditRecord ar where ar.codeAudit.id = :codeAuditId")
+	Collection<AuditRecord> findManyAuditRecordsByCodeAuditId(int codeAuditId);
 
 }

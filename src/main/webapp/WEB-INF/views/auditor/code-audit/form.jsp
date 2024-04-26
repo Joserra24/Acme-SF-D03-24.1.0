@@ -17,13 +17,13 @@
 			<acme:submit code="auditor.code-audit.form.button.update" action="/auditor/code-audit/update"/>
 			<acme:submit code="auditor.code-audit.form.button.delete" action="/auditor/code-audit/delete"/>
 			<acme:submit code="auditor.code-audit.form.button.publish" action="/auditor/code-audit/publish"/>
-			<acme:button code="auditor.code-audit.form.button.audit-record" action="/auditor/audit-record/list?codeAuditId=${id}"/>
+			<acme:button code="auditor.code-audit.form.button.audit-records" action="/auditor/audit-record/list?codeAuditId=${id}"/>
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update') && draftMode == false}">
 			<acme:input-textbox code="auditor.code-audit.list.label.mark" path="mark" readonly = "true"/>
 			<acme:input-textbox code="auditor.code-audit.form.label.project" path="project" readonly="true"/>
 			<acme:input-textbox code="auditor.code-audit.list.label.draft-mode" path="draftMode" readonly = "true"/>
-			<acme:button code="auditor.code-audit.form.button.audit-record" action="/auditor/audit-record/list?codeAuditId=${id}"/>
+			<acme:button code="auditor.code-audit.form.button.audit-records" action="/auditor/audit-record/list?codeAuditId=${id}"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
 			<acme:input-select code="auditor.code-audit.form.label.projects" path="project" choices="${projects}"/>
