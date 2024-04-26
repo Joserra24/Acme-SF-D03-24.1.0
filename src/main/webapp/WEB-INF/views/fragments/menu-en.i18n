@@ -49,6 +49,7 @@ master.menu.consumer.favourite-link = Favourite link
 master.menu.client = Client
 master.menu.client.contracts= List my Contracts
 master.menu.client.progress-logs= List my Progress Logs
+master.menu.client.dashboard = Dashboard
 
 # master.menu.user-account ####################################################
 
