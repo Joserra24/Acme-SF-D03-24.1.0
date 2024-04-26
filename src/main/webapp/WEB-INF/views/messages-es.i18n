@@ -1,0 +1,3 @@
+validation.risk.reference = La referencia de un riesgo debe seguir el siguiente patrón: R-XXX, siendo X un número del 0 al 9
+validation.sponsorship.code = El código de un patrocionio debe seguir uno de los siguientes patrones: A-XXX, AA-XXX ó AAA-XXX, siendo A una letra mayúscula y X un número del 0 al 9
+validation.invoice.code = El código de una factura debe seguir el siguiente patrón: IN-XXXX-XXXX, siendo X un número del 0 al 9

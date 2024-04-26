@@ -18,6 +18,7 @@ master.menu.sign-out = Sign out
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
+master.menu.anonymous.list-sponsorship = Published sponsorships
 master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.josbanbot-link = 20538111P: Baños Boton, Jose Ramon
 master.menu.anonymous.sonrusmor-link = 77868455T: Rus Morales, Sonia Maria
@@ -27,6 +28,12 @@ master.menu.anonymous.rubpergar-link = 77863706N: Perez Garrido, Ruben
 master.menu.anonymous.claim-list = Claim list
 master.menu.anonymous.training-module-list = Training Module list
 
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.all-risks = List risks
+master.menu.autheticated.list-sponsorship = Published sponsorships
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
@@ -35,6 +42,8 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shut-down = Shut down
+
+master.menu.administrator.list-risks = List risks
 master.menu.administrator.list.banner = Banner List
 
 # master.menu.provider ########################################################
@@ -46,6 +55,12 @@ master.menu.provider.favourite-link = Favourite link
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.sponsor ##########################################################
+
+master.menu.sponsor = Sponsor
+master.menu.sponsor.list-mine = My sponsorships
+master.menu.sponsor.dashboard = Dashboard
 
 # master.menu.auditor ####################################################
 
@@ -69,7 +84,6 @@ master.menu.developer.training-modules = List my Training Modules
 master.menu.developer.training-sessions = List my Training Sessions
 master.menu.developer.show-developer-dashboard = Dashboard
 
-
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
@@ -78,6 +92,9 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.become-sponsor = Become a sponsor
+master.menu.user-account.sponsor = Sponsor data
+
 master.menu.user-account.developer = Developer data
 master.menu.user-account.become-developer = Become a developer
 master.menu.user-account.manager = Manager data

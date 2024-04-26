@@ -1,0 +1,20 @@
+any.sponsorship.list.label.code = Code
+any.sponsorship.list.label.moment = Moment
+any.sponsorship.list.label.durationStart = Duration start
+any.sponsorship.list.label.durationEnd = Duration end
+any.sponsorship.list.label.amount = Amount
+any.sponsorship.list.label.projectType = Project type
+
+any.sponsorship.form.label.code = Code:
+any.sponsorship.form.label.moment = Moment:
+any.sponsorship.form.label.durationStart = Duration start:
+any.sponsorship.form.label.durationEnd = Duration end:
+any.sponsorship.form.label.amount = Amount:
+any.sponsorship.form.label.projectType = Project type:
+any.sponsorship.form.label.email = Email:
+any.sponsorship.form.label.link = Link:
+any.sponsorship.form.label.project = Project:
+any.sponsorship.form.label.sponsor = Sponsor:
+
+any.sponsorship.list.title = Published sponsorships
+any.sponsorship.form.title = Sponsorship details

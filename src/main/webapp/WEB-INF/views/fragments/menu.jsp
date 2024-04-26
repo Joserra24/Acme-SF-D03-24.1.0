@@ -19,6 +19,7 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.anonymous.list-sponsorship" action="/any/sponsorship/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.josbanbot-link" action="https://www.realbetisbalompie.es/club/estadio-benito-villamarin/"/>
 			<acme:menu-suboption code="master.menu.anonymous.sonrusmor-link" action="https://www.nationalgeographic.es/animales/2021/09/los-pandas-salen-de-la-lista-de-especies-en-peligro-en-china-pero-la-amenaza-continua"/>
@@ -28,6 +29,11 @@
 			<acme:menu-separator/>			
 			<acme:menu-suboption code="master.menu.anonymous.claim-list" action="/any/claim/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.training-module-list" action="/any/training-module/list"/>		
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.all-risks" action="/authenticated/risk/list"/>
+			<acme:menu-suboption code="master.menu.autheticated.list-sponsorship" action="/any/sponsorship/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -39,6 +45,7 @@
 			<acme:menu-suboption code="master.menu.administrator.list.banner" action="/administrator/banner/list" access="isAuthenticated()"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/system/shut-down"/>
+			<acme:menu-suboption code="master.menu.administrator.list-risks" action="/administrator/risk/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
@@ -49,12 +56,18 @@
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">
+			<acme:menu-suboption code="master.menu.sponsor.list-mine" action="/sponsor/sponsorship/list-mine"/>
+			<acme:menu-suboption code="master.menu.sponsor.dashboard" action="/sponsor/sponsor-dashboard/show"/>
+	  </acme:menu-option>
+    
 		<acme:menu-option code="master.menu.developer" access="hasRole('Developer')">
 			<acme:menu-suboption code="master.menu.developer.training-modules" action="/developer/training-module/list"/>
 			<acme:menu-suboption code="master.menu.developer.training-sessions" action="/developer/training-session/list-all"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.developer.show-developer-dashboard" action="/developer/developer-dashboard/show"/>
 		</acme:menu-option>
+    
 		<acme:menu-option code="master.menu.manager" access="hasRole('Manager')">
 			<acme:menu-suboption code="master.menu.manager.projects" action="/manager/project/list"/>
 			<acme:menu-suboption code="master.menu.manager.user-stories" action="/manager/user-story/list-all"/>
@@ -79,6 +92,8 @@
 			<acme:menu-suboption code="master.menu.user-account.provider" action="/authenticated/provider/update" access="hasRole('Provider')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create" access="!hasRole('Consumer')"/>
 			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update" access="hasRole('Consumer')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-sponsor" action="/authenticated/sponsor/create" access="!hasRole('Sponsor')"/>
+			<acme:menu-suboption code="master.menu.user-account.sponsor" action="/authenticated/sponsor/update" access="hasRole('Sponsor')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-developer" action="/authenticated/developer/create" access="!hasRole('Developer')"/>
 			<acme:menu-suboption code="master.menu.user-account.developer" action="/authenticated/developer/update" access="hasRole('Developer')"/>
 				<acme:menu-suboption code="master.menu.user-account.become-manager" action="/authenticated/manager/create" access="!hasRole('Manager')"/>

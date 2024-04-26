@@ -1,0 +1,29 @@
+sponsor.invoice.list.label.code = Código
+sponsor.invoice.list.label.registrationTime = Fecha de registro
+sponsor.invoice.list.label.dueDate = Fecha límite
+sponsor.invoice.list.label.quantity = Cantidad
+sponsor.invoice.list.label.tax = Impuesto
+
+sponsor.invoice.form.label.code = Código:
+sponsor.invoice.form.label.registrationTime = Fecha de registro:
+sponsor.invoice.form.label.dueDate = Fecha límite:
+sponsor.invoice.form.label.quantity = Cantidad:
+sponsor.invoice.form.label.tax = Impuesto:
+sponsor.invoice.form.label.totalAmount = Cantidad total:
+sponsor.invoice.form.label.link = Enlace (Opcional):
+sponsor.invoice.form.label.sponsorship = Patrocinio:
+sponsor.invoice.form.label.draftMode = Modo borrador
+
+sponsor.invoice.list.title = Mis facturas
+sponsor.invoice.form.title = Detalles de factura
+
+sponsor.invoice.list.button.create = Crear
+sponsor.invoice.form.button.create = Crear
+sponsor.invoice.form.button.update = Actualizar
+sponsor.invoice.form.button.delete = Borrar
+sponsor.invoice.form.button.publish = Publicar
+
+sponsor.invoice.form.error.duplicated = Este código ya está en uso
+sponsor.invoice.form.error.too-short = La fecha límite debe ser, mínimo, 30 días posterior a la fecha de registro
+sponsor.invoice.form.error.different-currency = La moneda debe ser la misma que la del patrocinio asociado
+sponsor.invoice.form.error.negative-amount = La cantidad debe ser positiva

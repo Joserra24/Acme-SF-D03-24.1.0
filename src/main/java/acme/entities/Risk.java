@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
-import javax.validation.constraints.Min;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
@@ -35,7 +35,7 @@ public class Risk extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^R-\\d{3}$")
+	@Pattern(regexp = "^R-\\d{3}$", message = "{validation.risk.reference}")
 	private String				reference;
 
 	@PastOrPresent
@@ -43,10 +43,12 @@ public class Risk extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				identificationDate;
 
-	@Min(0)
+	@Range(min = 0, max = 100)
+	@Digits(integer = 3, fraction = 2)
 	private double				impact;
 
 	@Range(min = 0, max = 100)
+	@Digits(integer = 3, fraction = 2)
 	private double				probability;
 
 	@NotBlank
@@ -61,10 +63,10 @@ public class Risk extends AbstractEntity {
 
 
 	@Transient
-	private double value() {
+	public double value() {
 		double result;
 
-		result = this.impact * (this.probability / 100.0);
+		result = this.impact * this.probability / 100.0;
 
 		return result;
 	}
