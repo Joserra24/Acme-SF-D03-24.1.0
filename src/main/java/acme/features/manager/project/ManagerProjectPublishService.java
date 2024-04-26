@@ -83,7 +83,7 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 	public void unbind(final Project object) {
 		assert object != null;
 		Dataset dataset;
-		dataset = super.unbind(object, "code", "title", "abstractProject", "cost", "link");
+		dataset = super.unbind(object, "code", "title", "abstractProject", "cost", "link", "draftMode");
 		super.getResponse().addData(dataset);
 	}
 }
